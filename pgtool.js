@@ -337,7 +337,7 @@ function PGTOOL() {
     function answered(qcode, answers, idx = null) {
         var category = categoryOf(qcode)
         var indicator = indicatorOf(qcode)
-        var question = form.categories[category].indicators[indicator].questions[qcode]
+        var question = form.categories[category].indicators[indicator].questions[qcode]     
         if (qcode in answers) {
             var answer = answers[qcode]
             // if answer is not empty
@@ -4063,6 +4063,16 @@ function PGTOOL() {
                                 ],
                                 question_type: QUESTION_TYPE.TEXT,
                             },
+                            initialdata_farminfo_country: {
+                                question_name: "Country",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.TEXT
+                            },
+                            initialdata_farminfo_currency: {
+                                question_name: "Currency",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.TEXT
+                            },
                             initialdata_farminfo_soiltype: {
                                 question_name: "Dominant soil type",
                                 compulsory: true,
@@ -4136,6 +4146,25 @@ function PGTOOL() {
                                 question_type: QUESTION_TYPE.NUMBER,
                                 answer_limits: { min: 0 },
                                 answer_unit: "months",
+                            },
+                            initialdata_farminfo_agrienvparticipation: {
+                                question_name: "What is the level of agri-environmental participation?",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "Cross compliance", answer_code: 0 },
+                                    { answer_name: "Basic level scheme", answer_code: 1 },
+                                    { answer_name: "Higher level scheme", answer_code: 2 }
+                                ]
+                            },
+                            initialdata_farminfo_lfa: {
+                                question_name: "Is more than 50% of land in a less favoured area?",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "Yes", answer_code: 0 },
+                                    { answer_name: "No", answer_code: 1 }
+                                ]
                             },
                             initialdata_farminfo_woodybiomassenergy: {
                                 question_name: "Is woody biomass production for energy present on the farm?",
@@ -4343,13 +4372,7 @@ function PGTOOL() {
                             },
                             initialdata_crops_cropprice: {
                                 question_name: "Price Recieved",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_crops_cropname",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_crops',
                                 answer_limits: { min: 0 },
@@ -5687,13 +5710,7 @@ function PGTOOL() {
                             
                             initialdata_seedsfeeds_seedsimportprice: {
                                 question_name: "Import price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_seedsfeeds_seedstype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_seeds',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -5784,13 +5801,7 @@ function PGTOOL() {
                             },
                             initialdata_seedsfeeds_feedsimportprice: {
                                 question_name: "Import price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_seedsfeeds_feedstype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_feeds',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -5830,13 +5841,7 @@ function PGTOOL() {
                             },
                             initialdata_seedsfeeds_feedsexportprice: {
                                 question_name: "Export price recieved",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_seedsfeeds_feedstype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_feeds',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -5982,13 +5987,7 @@ function PGTOOL() {
                             },
                             initialdata_fertilisers_organicimportprice: {
                                 question_name: "Import price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_fertilisers_organictype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_organicfertilisers',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -6025,13 +6024,7 @@ function PGTOOL() {
                             },
                             initialdata_fertilisers_organicexportprice: {
                                 question_name: "Export price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_fertilisers_organictype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_organicfertilisers',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -6147,13 +6140,7 @@ function PGTOOL() {
                             },
                             initialdata_fertilisers_inorganicimportprice: {
                                 question_name: "Import price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_fertilisers_inorganictype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_inorganicfertilisers',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -6355,13 +6342,7 @@ function PGTOOL() {
                             },
                             initialdata_livestock_importprice: {
                                 question_name: "Import price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_livestock_type",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_livestock',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -6389,13 +6370,7 @@ function PGTOOL() {
                             },
                             initialdata_livestock_exportprice: {
                                 question_name: "Export price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_livestock_type",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_livestock',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -6477,13 +6452,7 @@ function PGTOOL() {
                             },
                             initialdata_livestock_productimportprice: {
                                 question_name: "Import price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_livestock_producttype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_livestockproducts',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -6509,13 +6478,7 @@ function PGTOOL() {
                             },
                             initialdata_livestock_productexportprice: {
                                 question_name: "Export price",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: "initialdata_livestock_producttype",
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
+                                compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
                                 question_group: 'initialdata_livestockproducts',
                                 answer_type: ANSWER_TYPE.ARRAY,
@@ -8263,26 +8226,10 @@ function PGTOOL() {
                     },
                     soilmanagement_erosion: {
                         title: "Soil erosion",
-                        question_groups: {
-                            soilmanagement_landaffectederosion: {
-                                title: "Please report % of land affected by the following:",
-                                question_group_type: QUESTION_GROUP_TYPE.TABLE_HEADERS_LEFT,
-                                question_codes: [
-                                    [ 'soilmanagement_erosion_sheet' ],
-                                    [ 'soilmanagement_erosion_rill' ],
-                                    [ 'soilmanagement_erosion_gully' ],
-                                    [ 'soilmanagement_erosion_ponding' ],
-                                    [ 'soilmanagement_erosion_capping' ],
-                                    [ 'soilmanagement_erosion_wind' ],
-                                    [ 'soilmanagement_erosion_other' ]
-                                ]
-                            },
-                        },
                         questions: {
-                            soilmanagement_erosion_sheet: {
-                                question_name: "Sheet erosion",
+                            soilmanagement_erosion: {
+                                question_name: "What % of land is affected by erosion",
                                 compulsory: true,
-                                question_group: "soilmanagement_landaffectederosion",
                                 question_type: QUESTION_TYPE.DROPDOWN,
                                 answer_list: [
                                     { answer_name: "40-50%", answer_code: 0 },
@@ -8291,85 +8238,7 @@ function PGTOOL() {
                                     { answer_name: "1-10%", answer_code: 3 },
                                     { answer_name: "0%", answer_code: 4 }
                                 ]
-                            },
-                            soilmanagement_erosion_rill: {
-                                question_name: "Rill erosion",
-                                compulsory: true,
-                                question_group: "soilmanagement_landaffectederosion",
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "40-50%", answer_code: 0 },
-                                    { answer_name: "20-30%", answer_code: 1 },
-                                    { answer_name: "10-20%", answer_code: 2 },
-                                    { answer_name: "1-10%", answer_code: 3 },
-                                    { answer_name: "0%", answer_code: 4 }
-                                ]
-                            },
-                            soilmanagement_erosion_gully: {
-                                question_name: "Gully erosion",
-                                compulsory: true,
-                                question_group: "soilmanagement_landaffectederosion",
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "40-50%", answer_code: 0 },
-                                    { answer_name: "20-30%", answer_code: 1 },
-                                    { answer_name: "10-20%", answer_code: 2 },
-                                    { answer_name: "1-10%", answer_code: 3 },
-                                    { answer_name: "0%", answer_code: 4 }
-                                ]
-                            },
-                            soilmanagement_erosion_ponding: {
-                                question_name: "Ponding",
-                                compulsory: true,
-                                question_group: "soilmanagement_landaffectederosion",
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "40-50%", answer_code: 0 },
-                                    { answer_name: "20-30%", answer_code: 1 },
-                                    { answer_name: "10-20%", answer_code: 2 },
-                                    { answer_name: "1-10%", answer_code: 3 },
-                                    { answer_name: "0%", answer_code: 4 }
-                                ]
-                            },
-                            soilmanagement_erosion_capping: {
-                                question_name: "Capping of soil surface",
-                                compulsory: true,
-                                question_group: "soilmanagement_landaffectederosion",
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "40-50%", answer_code: 0 },
-                                    { answer_name: "20-30%", answer_code: 1 },
-                                    { answer_name: "10-20%", answer_code: 2 },
-                                    { answer_name: "1-10%", answer_code: 3 },
-                                    { answer_name: "0%", answer_code: 4 }
-                                ]
-                            },
-                            soilmanagement_erosion_wind: {
-                                question_name: "Wind erosion",
-                                compulsory: true,
-                                question_group: "soilmanagement_landaffectederosion",
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "40-50%", answer_code: 0 },
-                                    { answer_name: "20-30%", answer_code: 1 },
-                                    { answer_name: "10-20%", answer_code: 2 },
-                                    { answer_name: "1-10%", answer_code: 3 },
-                                    { answer_name: "0%", answer_code: 4 }
-                                ]
-                            },
-                            soilmanagement_erosion_other: {
-                                question_name: "Other soil damage/erosion",
-                                compulsory: true,
-                                question_group: "soilmanagement_landaffectederosion",
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "40-50%", answer_code: 0 },
-                                    { answer_name: "20-30%", answer_code: 1 },
-                                    { answer_name: "10-20%", answer_code: 2 },
-                                    { answer_name: "1-10%", answer_code: 3 },
-                                    { answer_name: "0%", answer_code: 4 }
-                                ]
-                            },
+                            }
                         }
                     },
                     soilmanagement_measureserosion: {
@@ -8389,23 +8258,6 @@ function PGTOOL() {
                                     { answer_name: "1-25%", answer_code: 2 },
                                     { answer_name: "25-50%", answer_code: 3 },
                                     { answer_name: "50% plus", answer_code: 4 }
-                                ]
-                            },
-                            soilmanagement_measureserosion_reducerisk: {
-                                question_name: "Are you implementing measures to reduce the risk of erosion and run off?",
-                                helper: {
-                                    html: false,
-                                    content: "Use the \"N/A\" option if you land is not subject to erosion."
-                                },
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "N/A", answer_code: 0 },
-                                    { answer_name: "No action being taken", answer_code: 1 },
-                                    { answer_name: "Low intensity measures (e.g. unploughed stubble left over winter)", answer_code: 2 },
-                                    { answer_name: "Low-medium intensity measures (e.g. undersowing crops)", answer_code: 3 },
-                                    { answer_name: "Medium intensity measures (e.g. planting grass strips and shelterbelts)", answer_code: 4 },
-                                    { answer_name: "High intensity measures (e.g. converting arable back to permanent pasture)", answer_code: 5 }
                                 ]
                             },
                         }
@@ -8875,56 +8727,10 @@ function PGTOOL() {
                     },
                     landscapeheritage_boundaries: {
                         title: "Management of boundaries",
-                        helper: {
-                            html: true,
-                            content: "Based on Farm Environment Plan Manual 3rd Edition (Natural England, 2010)"
-                        },
                         questions: {
-                            landscapeheritage_boundaries_hev: {
-                                question_name: "Do you have High Environmental Value (HEV) boundaries on your farm?",
-                                compulsory: true,
-                                helper: {
-                                    html: true,
-                                    content: "These include stone walls, stone-faced banks, earth banks, hedges, hedgebanks, lines of trees, ditches, relics of boundaries of historic importance (see <a href=\"http://naturalengland.etraderstores.com/NaturalEnglandShop/NE264\" target=\"_blank\">FEP manual p47-54</a> for definition of boundaries)"
-                                },
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "No", answer_code: 0 },
-                                    { answer_name: "Less than 100m", answer_code: 1 },
-                                    { answer_name: "100-2500m", answer_code: 2 },
-                                    { answer_name: "Greater than 5% of all boundaries", answer_code: 3 },
-                                    { answer_name: "Greater than 10% of all boundaries", answer_code: 4 }
-                                ]
-                            },
-                            landscapeheritage_boundaries_hedgerowtrees: {
-                                question_name: "How many hedgerow trees per 100m do you have on the farm?",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: 'landscapeheritage_boundaries_hev',
-                                        evaluate: EVALUATORS.IS_ONE_OF,
-                                        value: [ 1, 2, 3, 4 ]
-                                    }
-                                ],
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "Less than 1", answer_code: 0 },
-                                    { answer_name: "1 to 2", answer_code: 1 },
-                                    { answer_name: "3 to 4", answer_code: 2 },
-                                    { answer_name: "5 to 10", answer_code: 3 },
-                                    { answer_name: "Greater than 10", answer_code: 4 }
-                                ]
-                            },
                             landscapeheritage_boundaries_restore: {
                                 question_name: "Are you taking action to restore/manage appropriate boundary features (e.g hedges, hedge banks, earth banks, stone faced banks, stone walls, ditches)?",
                                 compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: 'landscapeheritage_boundaries_hev',
-                                        evaluate: EVALUATORS.IS_ONE_OF,
-                                        value: [ 1, 2, 3, 4 ]
-                                    }
-                                ],
                                 question_type: QUESTION_TYPE.DROPDOWN,
                                 answer_list: [
                                     { answer_name: "No", answer_code: 0 },
@@ -12128,31 +11934,7 @@ function PGTOOL() {
                                 question_group: 'energycarbon_renewableenergy_renewableenergyuse',
                                 auto_calc: true,
                                 answer_unit: "%"
-                            },
-                            energycarbon_renewableenergy_percrenewableenergyonfarm: {
-                                question_name: "What % of your energy use is from renewable sources? This includes 'green tariffs' for electricity consumption",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: '0%', answer_code: 0 },
-                                    { answer_name: '1-20%', answer_code: 1 },
-                                    { answer_name: '20-40%', answer_code: 2 },
-                                    { answer_name: '40-60%', answer_code: 3 },
-                                    { answer_name: '60%+', answer_code: 4 }
-                                ]
-                            },
-                            energycarbon_renewableenergy_produceenergy: {
-                                question_name: "Do you produce energy and do you export energy off farm (e.g. supplying solar energy to the grid, selling wood chip to neighbours)?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: 'Don\'t produce any energy', answer_code: 0 },
-                                    { answer_name: 'Produce energy and cover half own energy needs', answer_code: 1 },
-                                    { answer_name: 'Produce energy and cover all own energy needs', answer_code: 2 },
-                                    { answer_name: 'Export some energy occasionally', answer_code: 3 },
-                                    { answer_name: 'Export energy every day', answer_code: 4 }
-                                ]
-                            },
+                            }
                         }
                     },
                     energycarbon_energyratio: {
@@ -12357,100 +12139,6 @@ function PGTOOL() {
                                 auto_calc: true,
                                 answer_unit: ": 1"
                             }
-                        }
-                    },
-                    energycarbon_energysavingoptions: {
-                        title: "Energy saving options",
-                        questions: {
-                            energycarbon_energysavingoptions_monitor: {
-                                question_name: "Do you monitor/record on-farm energy use?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "No", answer_code: 0 },
-                                    { answer_name: "Rarely", answer_code: 1 },
-                                    { answer_name: "Occasionally", answer_code: 2 },
-                                    { answer_name: "Often", answer_code: 3 },
-                                    { answer_name: "Always", answer_code: 4 }
-                                ]
-                            },
-                            energycarbon_energysavingoptions_energyaudit: {
-                                question_name: "Have you completed an energy audit to explore efficiency options and are you acting on it?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "No", answer_code: 0 },
-                                    { answer_name: "Yes but not acting on yet", answer_code: 1 },
-                                    { answer_name: "Yes and acting on partly", answer_code: 2 },
-                                    { answer_name: "Yes and acting on mostly", answer_code: 3 },
-                                    { answer_name: "Yes and acting on fully", answer_code: 4 }
-                                ]
-                            }
-                        }
-                    },
-                    energycarbon_greenhousegases: {
-                        title: "Greenhouse gases",
-                        questions: {
-                            energycarbon_greenhousegases_audit: {
-                                question_name: "Have you completed a CALM audit (www.calm.cla.org.uk) or similar and are you acting on recommendations?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "No", answer_code: 0 },
-                                    { answer_name: "Yes but not acting on yet", answer_code: 1 },
-                                    { answer_name: "Yes and acting on partly", answer_code: 2 },
-                                    { answer_name: "Yes and acting on mostly", answer_code: 3 },
-                                    { answer_name: "Yes and acting on fully", answer_code: 4 }
-                                ]
-                            },
-                            energycarbon_greenhousegases_options: {
-                                question_name: "How many of the options below do you have on your farm?",
-                                helper: {
-                                    html: true,
-                                    content: "<p><strong>Establishment of hedgerow trees</strong></p><p>• Select locally native tree species<br>• Trees established at irregular spacing at least 20m apart</p><p><strong>Management of woodland edges</strong></p><p>• Do not cultivate or apply fertilisers or manures within 6 m of the woodland edge<br>• Trim no more than a third of the shrubby growth in any 1 year<br>• Do not supplementary feed or locate water troughs in such a way as to cause poaching on the woodland edge<br>• Only apply herbicides to spot-treat or weed-wipe for the control of injurious weeds or invasive non-native species<br>• Do not apply fertilisers or manures</p><p><strong>Buffer strips for watercourses</strong></p><p>• Establish or maintain a grassy strip 6m+ wide<br>• Do not apply any fertilisers or manures<br>• Do not use for regular vehicular access, turning or storage<br>• Do not graze the buffer strip</p><p><strong>Buffering in-field ponds</strong></p><p>• Leave at least 10m between the pond edge & field<br>• Cut no more than once every 5 years<br>• Do not apply fertilisers or manures<br>• Only apply herbicides to control of injurious weeds or invasive non-native species<br>• Limit livestock access</p><p><strong>Field corner management</strong></p><p>• Establish or maintain a field corner by sowing or natural regeneration<br>• Do not use field corners for regular vehicular access, turning or storage<br>• Only apply herbicides to control of injurious weeds or invasive non-native species<br>• Cut no more than once every 5 years<br>• Do not cut between March & August<br>• Do not apply fertilisers or manure</p><p><strong>Nectar Flower mixture</strong></p><p>• Mix of at least four nectar-rich plants<br>• In strips at least 6 m wide sown in early spring or late summer<br>• Do not apply pesticides, fertilisers, manures or lime<br>• Do not graze in the spring or summer</p><p><strong>Beetle banks</strong></p><p>• Create or maintain an earth ridge 2m-4m wide sown with a mixture of perennial grasses<br>• Do not apply any pesticides, fertilisers or manures</p><p><strong>Undersow spring cereal</strong></p><p>• Undersow spring cereal crop (not maize) with a grass ley<br>• Keep Undersow plant growth until the cereal crop is harvested<br>• Do not destroy grass ley before July of the following year</p><p><strong>Winter cover crop</strong></p><p>• Establish a cover crop by September to provide a dense cover and protect from soil erosion<br>• Do not apply any fertilisers or manures</p><p><strong>In-field grass areas</strong><p>• Establish or maintain a dense grassy area no less than 10 m along its entire length<br>• Cut area annually after mid-July<br>• Do not apply any fertilisers or manures<br>• Only apply herbicides to control of injurious weeds or invasive non-native species<br>• Do not use for regular vehicular access or graze</p><p><strong>Low input permanent grassland</strong></p><p>• Do not plough, cultivate or re-seed<br>• Total rate of nitrogen must not exceed 100 kg/ha nitrogen per year of which a maximum of 50kg/ha can be inorganic</p><p><strong>Management of rush pastures</strong></p><p>• Maintain as grass. Do not plough, cultivate or re-seed<br>• Cut no more than a third of the area of rushes each year<br>• Only apply farm yard manure<br>• Only apply herbicides to control of injurious weeds or invasive non-native species</p><p><strong>Hedge planting</strong></p><p>• New hedges established using native species</p>"
-                                },
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "None", answer_code: 0 },
-                                    { answer_name: "1 to 3", answer_code: 1 },
-                                    { answer_name: "4 to 6", answer_code: 2 },
-                                    { answer_name: "7 to 9", answer_code: 3 },
-                                    { answer_name: "10 to 13", answer_code: 4 },
-                                    { answer_name: "N/A", answer_code: 5 }
-                                ]
-                            }
-                        }
-                    },
-                    energycarbon_landusechange: {
-                        title: "Land use change",
-                        questions: {
-                            energycarbon_landusechange_converttoarable: {
-                                question_name: "Have you converted woodland or grassland to arable in the last 20 years? If so what % of your total woodland/grassland was converted?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "N/A", answer_code: 0 },
-                                    { answer_name: "None", answer_code: 1 },
-                                    { answer_name: "1-15%", answer_code: 2 },
-                                    { answer_name: "15-30%", answer_code: 3 },
-                                    { answer_name: "30-45%", answer_code: 4 },
-                                    { answer_name: "45-60%+", answer_code: 5 }
-                                ]
-                            },
-                            energycarbon_landusechange_convertfromarable: {
-                                question_name: "Have you converted arable land to permanent grassland or woodland in the last 20 years? If so what % of your total arable area was converted?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "N/A", answer_code: 0 },
-                                    { answer_name: "None", answer_code: 1 },
-                                    { answer_name: "1-15%", answer_code: 2 },
-                                    { answer_name: "15-30%", answer_code: 3 },
-                                    { answer_name: "30-45%", answer_code: 4 },
-                                    { answer_name: "45-60%+", answer_code: 5 }
-                                ]
-                            },
                         }
                     },
                     energycarbon_carbonstocks: {
@@ -13210,19 +12898,6 @@ function PGTOOL() {
                                     ]
 
                                 ]
-                                // question_group_type: QUESTION_GROUP_TYPE.TABLE_HEADERS_TOP,
-                                // question_group_headers: {
-                                //     rows: [
-                                //         "Casual",
-                                //         "Long term (including family)",
-                                //         "Family labour",
-                                //     ]
-                                // },
-                                // question_codes: [
-                                //     [ 'socialcapital_employment_casual' ],
-                                //     [ 'socialcapital_employment_longterm' ],
-                                //     [ 'socialcapital_employment_familylabour' ]
-                                // ]
                             }
                         },
                         questions: {
@@ -13300,6 +12975,32 @@ function PGTOOL() {
                             }
                         }
                     },
+                    socialcapital_employment_other:{
+                        title: "Employment other",
+                        questions: {
+                            socialcapital_employment_other_salary:{                            
+                                question_name: "How would you describe the salary/wage level for staff working on your farm?",
+                                compulsory: false,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "Below average", answer_code: 0 },
+                                    { answer_name: "Average", answer_code: 1 },
+                                    { answer_name: "Higher than average", answer_code: 2 },
+                                    { answer_name: "N/A", answer_code: 3 }
+                                ]
+                            },
+                            socialcapital_other_otherbusiness:{
+                                question_name: "Do other businesses not owned by you operate on the farm?",
+                                compulsory: false,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "No", answer_code: 0 },
+                                    { answer_name: "Yes, only in farm buildings", answer_code: 1 },
+                                    { answer_name: "Yes, on the farmland", answer_code: 2 }
+                                ]
+                            }
+                        }
+                    },
                     socialcapital_skillsandknowledge: {
                         title: "Skills and knowledge",
                         question_groups: {
@@ -13362,13 +13063,6 @@ function PGTOOL() {
                     socialcapital_communityengagement: {
                         title: "Community engagement",
                         questions: {
-                            socialcapital_communityengagement_events: {
-                                question_name: "How many visitor events do you have per year?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "no."
-                            },
                             socialcapital_communityengagement_commeans: {
                                 question_name: "Do you use any of the means of communication listed below?",
                                 question_type: QUESTION_TYPE.MULTIPLE_ANSWER,
@@ -13380,55 +13074,6 @@ function PGTOOL() {
                                     { answer_name: "Farmers' markets", answer_code: 4 },
                                     { answer_name: "Research/demonstrating projects", answer_code: 5 },
                                     { answer_name: "Open days", answer_code: 6 }
-                                ]
-                            },
-                            socialcapital_communityengagement_nrvisitors: {
-                                question_name: "How many visitors come through the farm gate?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: 'no.'
-                            },
-                            socialcapital_communityengagement_awards: {
-                                question_name: "Have you received any awards for staff welfare/community engagement?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "None", answer_code: 0 },
-                                    { answer_name: "Yes, local award(s)", answer_code: 1 },
-                                    { answer_name: "Yes, regional award(s)", answer_code: 2 },
-                                    { answer_name: "Yes, national award(s)", answer_code: 3 }
-                                ]
-                            }
-                        }
-                    },
-                    socialcapital_csr: {
-                        title: "Corporate Social Responsibility initiatives and accreditations",
-                        questions: {
-                            socialcapital_csr_accreditations: {
-                                question_name: "Do you hold the 'Investors in People' award or any other similar corporate social responsibility accreditations?",
-                                helper: {
-                                    html: false,
-                                    content: "Use N/A only for small farms only employing family"
-                                },
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "Yes, hold IIP, ISO14001 or similar", answer_code: 0 },
-                                    { answer_name: "Working towards IIP, ISO14001 or similar", answer_code: 1 },
-                                    { answer_name: "No accreditations but have policies in place (e.g staff contracts, health & safety policy)", answer_code: 2 },
-                                    { answer_name: "No", answer_code: 3 },
-                                    { answer_name: "N/A (small farm only employing family)", answer_code: 4 }
-                                ]
-                            },
-                            socialcapital_csr_ethicaltradescheme: {
-                                question_name: "Are you a member of an ethical trade scheme (for example, Soil Association ethical trade, SSE, Ethical Trading Initiative)",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "Member of an ethical trade scheme", answer_code: 0 },
-                                    { answer_name: "Working towards such membership", answer_code: 1 },
-                                    { answer_name: "Not a member", answer_code: 2 }
                                 ]
                             }
                         }
@@ -13471,21 +13116,6 @@ function PGTOOL() {
                     socialcapital_humanhealth: {
                         title: "Human health issues",
                         questions: {
-                            socialcapital_humanhealth_coshh: {
-                                question_name: "Have you carried out a COSHH assessment?",
-                                helper: {
-                                    html: false,
-                                    content: "N/A option has been made available however farms where COSHH is not applicable are likely to be rare."
-                                },
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "Yes", answer_code: 0 },
-                                    { answer_name: "In the process of doing so", answer_code: 1 },
-                                    { answer_name: "No", answer_code: 2 },
-                                    { answer_name: "N/A", answer_code: 3 }
-                                ]
-                            },
                             socialcapital_humanhealth_healthsafety: {
                                 question_name: "How rigorously is health and safety enforced on the farm? ie: how much training and/or risk assessment is provided",
                                 compulsory: true,
@@ -13519,6 +13149,27 @@ function PGTOOL() {
                                     { answer_name: "N/A", answer_code: 3 }
                                 ]
                             },
+                            socialcapital_humanhealth_treeimpact: {
+                                question_name: "How and to what extent does the cultivation/use of tree product(s) produced on the farm affect the working environment?",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "N/A", answer_code: 0 },
+                                    { answer_name: "No affect", answer_code: 1 },
+                                    { answer_name: "Negative affect (e.g. leads to increased demand/stress)", answer_code: 2 },
+                                    { answer_name: "Positive effect (e.g. leads to increased employment opportunity and improved staff wellbeing)", answer_code: 3 }
+                                ]
+                            },
+                            socialcapital_humanhealth_holiday: {
+                                question_name: "Are you happy with the amount of holiday period you can take over a year?",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "No", answer_code: 0 },
+                                    { answer_name: "Partly", answer_code: 1 },
+                                    { answer_name: "Yes", answer_code: 2 }
+                                ]
+                            }
                         }
                     }
                 }
@@ -13526,182 +13177,6 @@ function PGTOOL() {
             farmbusinessresilience: {
                 title: "Farm Business Resilience",
                 indicators: {
-                    farmbusinessresilience_financialviability: {
-                        title: "Financial viability",
-                        question_groups: {
-                            farmbusinessresilience_pricesgroup: {
-                                heading: {
-                                    html: false,
-                                    content: "What sort of prices are you getting at present"
-                                },
-                                helper: {
-                                    html: false,
-                                    content: "Leave blank if you do not produce the product"
-                                },
-                                question_group_type: QUESTION_GROUP_TYPE.TABLE_HEADERS_LEFT,
-                                question_group_headers: {
-                                    rows: [
-                                        "Milk",
-                                        "Finished beef cattle",
-                                        "Weaners",
-                                        "Finished pigs",
-                                        "Finished lambs - lowland",
-                                        "Finished lambs - upland",
-                                        "Free range eggs",
-                                        "Table chicken",
-                                        "Feed wheat",
-                                        "Milling wheat",
-                                        "Barley",
-                                        "Oats",
-                                        "Potatoes (maincrop)",
-                                        "Potatoes (early)",
-                                    ]
-                                },
-                                question_codes: [
-                                    [ 'farmbusinessresilience_financialviability_milk' ],
-                                    [ 'farmbusinessresilience_financialviability_beef' ],
-                                    [ 'farmbusinessresilience_financialviability_weaners' ],
-                                    [ 'farmbusinessresilience_financialviability_pigs' ],
-                                    [ 'farmbusinessresilience_financialviability_lambslowland' ],
-                                    [ 'farmbusinessresilience_financialviability_lambsupland' ],
-                                    [ 'farmbusinessresilience_financialviability_eggs' ],
-                                    [ 'farmbusinessresilience_financialviability_chicken' ],
-                                    [ 'farmbusinessresilience_financialviability_feedwheat' ],
-                                    [ 'farmbusinessresilience_financialviability_millingwheat' ],
-                                    [ 'farmbusinessresilience_financialviability_barley' ],
-                                    [ 'farmbusinessresilience_financialviability_oats' ],
-                                    [ 'farmbusinessresilience_financialviability_potatoesmaincrop' ],
-                                    [ 'farmbusinessresilience_financialviability_potatoesearly' ]
-                                ]
-                            }
-                        },
-                        questions: {
-                            farmbusinessresilience_financialviability_milk: {
-                                question_name: "What sort of prices per litre of milk are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/l"
-                            },
-                            farmbusinessresilience_financialviability_beef: {
-                                question_name: "What sort of prices for finished beef cattle are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/kg lw"
-                            },
-                            farmbusinessresilience_financialviability_weaners: {
-                                question_name: "What sort of prices for weaners are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/head"
-                            },
-                            farmbusinessresilience_financialviability_pigs: {
-                                question_name: "What sort of prices for finished pigs are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/kg dw"
-                            },
-                            farmbusinessresilience_financialviability_lambslowland: {
-                                question_name: "What sort of prices for finished lambs (lowland) are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/kg lw"
-                            },
-                            farmbusinessresilience_financialviability_lambsupland: {
-                                question_name: "What sort of prices for finished lambs (upland) are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/kg lw"
-                            },
-                            farmbusinessresilience_financialviability_eggs: {
-                                question_name: "What sort of prices for free range eggs are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/dozen"
-                            },
-                            farmbusinessresilience_financialviability_chicken: {
-                                question_name: "What sort of prices for table chicken are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/kg lw"
-                            },
-                            farmbusinessresilience_financialviability_feedwheat: {
-                                question_name: "What sort of prices per tonne of feed wheat are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/t"
-                            },
-                            farmbusinessresilience_financialviability_millingwheat: {
-                                question_name: "What sort of prices per tonne of milling wheat are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/t"
-                            },
-                            farmbusinessresilience_financialviability_barley: {
-                                question_name: "What sort of prices per tonne of barley are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/t"
-                            },
-                            farmbusinessresilience_financialviability_oats: {
-                                question_name: "What sort of prices per tonne of oats are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/t"
-                            },
-                            farmbusinessresilience_financialviability_potatoesmaincrop: {
-                                question_name: "What sort of prices per tonne of potatoes (maincrop) are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/t"
-                            },
-                            farmbusinessresilience_financialviability_potatoesearly: {
-                                question_name: "What sort of prices per tonne of potatoes (early) are you getting at present",
-                                compulsory: false,
-                                question_group: 'farmbusinessresilience_pricesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£/t"
-                            },
-                            farmbusinessresilience_financialviability_netassets: {
-                                question_name: "How have your net assets (total assets less total liabilities) changed in the last year?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "Increased by over 5%", answer_code: 0 },
-                                    { answer_name: "Increase of less than 5%", answer_code: 1 },
-                                    { answer_name: "Not much change from previous year", answer_code: 2 },
-                                    { answer_name: "Decrease of less than 5%", answer_code: 3 },
-                                    { answer_name: "Decrease of more than 5%", answer_code: 4 }
-                                ]
-                            },
-                        }
-                    },
                     farmbusinessresilience_farmincome: {
                         title: "Farm Income",
                         question_groups: {
@@ -14069,6 +13544,19 @@ function PGTOOL() {
                                     { answer_name: ">6", answer_code: 4 },
                                 ]
                             },
+                            farmbusinessresilience_farmresilience_nonfooddemand: {
+                                question_name: "How is the current level of demand for the non-food product produced by the farm business?",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "N/A", answer_code: 0 },
+                                    { answer_name: "Reducing considerably", answer_code: 1 },
+                                    { answer_name: "Reducing slightly", answer_code: 2 },
+                                    { answer_name: "Remaining steady", answer_code: 3 },
+                                    { answer_name: "Increasingly slightly", answer_code: 4 },
+                                    { answer_name: "Increasingly considerably", answer_code: 5 }
+                                ]
+                            },
                             farmbusinessresilience_farmresilience_stateofbusiness: {
                                 question_name: "How often do you review the state of your business?",
                                 compulsory: true,
@@ -14115,6 +13603,10 @@ function PGTOOL() {
                         title: "Finacial Summary",
                         question_groups: {
                             farmbusinessresilience_financialsum: {
+                                    helper: {
+                                    html: false,
+                                    content: "May not be accurate if economic data in Initial data, Farm businsess resilience, Animal health and welfare are not completed."
+                                },
                                 question_group_type: QUESTION_GROUP_TYPE.TABLE,question_group_headers: {
                                     rows: [
                                         'Income',
@@ -14623,96 +14115,7 @@ function PGTOOL() {
                     },
                     animalhealthwelfare_animalhealth: {
                         title: "Animal health",
-                        question_groups: {
-                            animalhealthwelfare_veterinarymedicinesgroup: {
-                                heading: {
-                                    html: false,
-                                    content: "How much do you spend on veterinary medicines?"
-                                },
-                                helper: {
-                                    html: false,
-                                    content: "Fill in breakdown and total if known, or at least the total if breakdown is not available."
-                                },
-                                compulsoryIf: [
-                                    {
-                                        question: 'initialdata_livestock_type',
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
-                                question_group_type: QUESTION_GROUP_TYPE.TABLE_HEADERS_LEFT,
-                                question_group_headers: {
-                                    rows: [
-                                        "Preventative (i.e. vaccinations, discussions with vet regarding improving management)",
-                                        "Treatment - conventional",
-                                        "Treatment - alternative",
-                                        "Total"
-                                    ]
-                                },
-                                question_codes: [
-                                    [ 'animalhealthwelfare_animalhealth_preventive' ],
-                                    [ 'animalhealthwelfare_animalhealth_conventional' ],
-                                    [ 'animalhealthwelfare_animalhealth_alternative' ],
-                                    [ 'animalhealthwelfare_animalhealth_total' ]
-                                ]
-                            }
-                        },
                         questions: {
-                            animalhealthwelfare_animalhealth_preventive: {
-                                question_name: "How much do you spend on preventative veterinary medicines (i.e. vaccinations, discussions with vet regarding improving management)?",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: 'initialdata_livestock_type',
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
-                                question_group: 'animalhealthwelfare_veterinarymedicinesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£ total per year"
-                            },
-                            animalhealthwelfare_animalhealth_conventional: {
-                                question_name: "How much do you spend on conventional veterinary treatments?",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: 'initialdata_livestock_type',
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
-                                question_group: 'animalhealthwelfare_veterinarymedicinesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£ total per year"
-                            },
-                            animalhealthwelfare_animalhealth_alternative: {
-                                question_name: "How much do you spend on alternative veterinary treatments?",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: 'initialdata_livestock_type',
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
-                                question_group: 'animalhealthwelfare_veterinarymedicinesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£ total per year"
-                            },
-                            animalhealthwelfare_animalhealth_total: {
-                                question_name: "How much do you spend in total on veterinary medicines?",
-                                compulsory: true,
-                                compulsoryIf: [
-                                    {
-                                        question: 'initialdata_livestock_type',
-                                        evaluate: EVALUATORS.NOT_EMPTY
-                                    }
-                                ],
-                                question_group: 'animalhealthwelfare_veterinarymedicinesgroup',
-                                question_type: QUESTION_TYPE.NUMBER,
-                                answer_limits: { min: 0 },
-                                answer_unit: "£ total per year"
-                            },
                             animalhealthwelfare_animalhealth_diseaseprevention: {
                                 question_name: "Do you consider disease prevention in breed/ breeding stock selection (this may include considering rare/traditional breeds suited to your area of the country)?",
                                 compulsory: true,
@@ -15151,73 +14554,7 @@ function PGTOOL() {
                     soilmanagement_erosion: {
                         total: indicatorTotalFn,
                         questions: {
-                            soilmanagement_erosion_sheet: function(acode) {
-                                if (acode === false) return false
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            soilmanagement_erosion_rill: function(acode) {
-                                if (acode === false) return false
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            soilmanagement_erosion_gully: function(acode) {
-                                if (acode === false) return false
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            soilmanagement_erosion_ponding: function(acode) {
-                                if (acode === false) return false
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            soilmanagement_erosion_capping: function(acode) {
-                                if (acode === false) return false
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            soilmanagement_erosion_wind: function(acode) {
-                                if (acode === false) return false
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            soilmanagement_erosion_other: function(acode) {
+                            soilmanagement_erosion: function(acode) {
                                 if (acode === false) return false
                                 var scores = {
                                     0: 1,
@@ -15241,18 +14578,6 @@ function PGTOOL() {
                                     2: 2,
                                     3: 4,
                                     4: 5
-                                }
-                                return scores[acode]
-                            },
-                            soilmanagement_measureserosion_reducerisk: function(acode) {
-                                if (acode === false) return false
-                                var scores = {
-                                    0: false,
-                                    1: 1,
-                                    2: 2,
-                                    3: 3,
-                                    4: 4,
-                                    5: 5
                                 }
                                 return scores[acode]
                             },
@@ -15571,26 +14896,6 @@ function PGTOOL() {
                     landscapeheritage_boundaries: {
                         total: indicatorTotalFn,
                         questions: {
-                            landscapeheritage_boundaries_hev: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            landscapeheritage_boundaries_hedgerowtrees: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
                             landscapeheritage_boundaries_restore: function(acode) {
                                 var scores = {
                                     0: 1,
@@ -16201,26 +15506,6 @@ function PGTOOL() {
                                 } else {
                                     return false
                                 }
-                            },
-                            energycarbon_renewableenergy_percrenewableenergyonfarm: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            energycarbon_renewableenergy_produceenergy: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
                             }
                         }
                     },
@@ -16345,84 +15630,6 @@ function PGTOOL() {
                                 } else {
                                     return false
                                 }
-                            }
-                        }
-                    },
-                    energycarbon_energysavingoptions: {
-                        total: indicatorTotalFn,
-                        questions: {
-                            energycarbon_energysavingoptions_monitor: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            energycarbon_energysavingoptions_energyaudit: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                        }
-                    },
-                    energycarbon_greenhousegases: {
-                        total: indicatorTotalFn,
-                        questions: {
-                            energycarbon_greenhousegases_audit: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5
-                                }
-                                return scores[acode]
-                            },
-                            energycarbon_greenhousegases_options: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 4,
-                                    4: 5,
-                                    5: false
-                                }
-                                return scores[acode]
-                            }
-                        }
-                    },
-                    energycarbon_landusechange: {
-                        total: indicatorTotalFn,
-                        questions: {
-                            energycarbon_landusechange_converttoarable: function(acode) {
-                                var scores = {
-                                    0: false,
-                                    1: 5,
-                                    2: 4,
-                                    3: 3,
-                                    4: 2,
-                                    5: 1
-                                }
-                                return scores[acode]
-                            },
-                            energycarbon_landusechange_convertfromarable: function(acode) {
-                                var scores = {
-                                    0: false,
-                                    1: 1,
-                                    2: 2,
-                                    3: 3,
-                                    4: 4,
-                                    5: 5
-                                }
-                                return scores[acode]
                             }
                         }
                     },
@@ -16711,6 +15918,35 @@ function PGTOOL() {
                             }
                         }
                     },
+                    socialcapital_employment_other: {
+                        total: indicatorTotalFn,
+                        questions: {
+                            socialcapital_employment_other_salary: function(value) {
+                                if (value === false) return false
+                                if (value == 0) {
+                                    return 1
+                                } else if (value == 1) {
+                                    return 3
+                                } else if (value == 2) {
+                                    return 5
+                                } else {
+                                    return 0
+                                }
+                            },
+                            socialcapital_employment_other_otherbusiness: function(value) {
+                                if (value === false) return false
+                                if (value == 0) {
+                                    return 1
+                                } else if (value == 1) {
+                                    return 3
+                                } else if (value == 2) {
+                                    return 5
+                                } else {
+                                    return 0
+                                }
+                            },
+                        }
+                    },
                     socialcapital_skillsandknowledge: {
                         total: indicatorTotalFn,
                         questions: {
@@ -16756,21 +15992,6 @@ function PGTOOL() {
                     socialcapital_communityengagement: {
                         total: indicatorTotalFn,
                         questions: {
-                            socialcapital_communityengagement_events: function(value) {
-                                if (value === 0) {
-                                    return 1
-                                } else if (value === 1) {
-                                    return 1
-                                } else if (value === 2) {
-                                    return 2
-                                } else if (value === 3) {
-                                    return 3
-                                } else if (value === 4) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
                             socialcapital_communityengagement_commeans: function(acodes) {
                                 var total = acodes.length
                                 var scores = {
@@ -16784,51 +16005,6 @@ function PGTOOL() {
                                     7: 5
                                 }
                                 return scores[total]
-                            },
-                            socialcapital_communityengagement_nrvisitors: function(value) {
-                                if (value < 100) {
-                                    return 1
-                                } else if (value < 200) {
-                                    return 2
-                                } else if (value < 300) {
-                                    return 3
-                                } else if (value < 400) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            socialcapital_communityengagement_awards: function(acode) {
-                                var scores = {
-                                    0: 1,
-                                    1: 2,
-                                    2: 3,
-                                    3: 5
-                                }
-                                return scores[acode]
-                            },
-                        }
-                    },
-                    socialcapital_csr: {
-                        total: indicatorTotalFn,
-                        questions: {
-                            socialcapital_csr_accreditations: function(acode) {
-                                var scores = {
-                                    0: 5,
-                                    1: 4,
-                                    2: 3,
-                                    3: 1,
-                                    4: false
-                                }
-                                return scores[acode]
-                            },
-                            socialcapital_csr_ethicaltradescheme: function(acode) {
-                                var scores = {
-                                    0: 5,
-                                    1: 3,
-                                    2: 1
-                                }
-                                return scores[acode]
                             }
                         }
                     },
@@ -16864,15 +16040,6 @@ function PGTOOL() {
                     socialcapital_humanhealth: {
                         total: indicatorTotalFn,
                         questions: {
-                            socialcapital_humanhealth_coshh: function(acode) {
-                                var scores = {
-                                    0: 5,
-                                    1: 3,
-                                    2: 1,
-                                    3: false
-                                }
-                                return scores[acode]
-                            },
                             socialcapital_humanhealth_healthsafety: function(acode) {
                                 var scores = {
                                     0: 5,
@@ -16896,6 +16063,22 @@ function PGTOOL() {
                                     0: 5,
                                     1: 3,
                                     2: 1
+                                }
+                                return scores[acode]
+                            },
+                            socialcapital_humanhealth_treeimpact: function(acode) {
+                                var scores = {
+                                    0: 3,
+                                    1: 1,
+                                    2: 5
+                                }
+                                return scores[acode]
+                            },
+                            socialcapital_humanhealth_holiday: function(acode) {
+                                var scores = {
+                                    0: 1,
+                                    1: 3,
+                                    2: 5
                                 }
                                 return scores[acode]
                             }
