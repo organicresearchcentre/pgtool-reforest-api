@@ -1,5 +1,4 @@
 # Public Goods Tool
-https://organicresearchcentre.github.io/pgtool-reforest-gui/
 ## Background
 The PG Tool was built to allow researchers and land managers alike to easily identify the public goods that are being created on their land through data collected under various indicators. The tool was also built with flexibility and adaptability in mind, with numerous custom versions being built over the years to address specific research interests.
 
@@ -22,4 +21,3 @@ Within a .html webpage just import the script in order to use it. There are two 
 - Use a third-party cdn service (like [jsdelivr.com](https://www.jsdelivr.com/)), as in the following example:
 
 `<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/organicresearchcentre/pgtool-api@master/pgtool.js"></script>`
-
