@@ -8264,403 +8264,6 @@ function PGTOOL() {
                     }
                 }
             },
-            // agrienvironmentalmanagement: {
-            //     title: "Agri-environmental management",
-            //     indicators: {
-            //         agrienvironmentalmanagement_participation: {
-            //             title: "Agri-environmental participation",
-            //             questions: {
-            //                 agrienvironmentalmanagement_participation_howmanyoptions: {
-            //                     question_name: "How many environmental management options do you undertake on your farm?",
-            //                     compulsory: true,
-            //                     helper: {
-            //                         html: true,
-            //                         content: "<p><strong>GENERAL OPTIONS</strong></p><p><strong>Hedgerow management</strong></p><p>• Hedge height kept above 1.5 m (except when laid or coppiced)<br>• No cultivation or application of manures or agrochemicals within 2m of the centre of the hedge<br>• Cut no more than once every 2 years<br>• Do not cut all hedges in same year<br>• No cutting during bird-breeding season (March to August)<br>• Hedges with over 10% gap planted up with locally native shrubs</p><p><strong>Ditch management</strong></p><p>• Do not cultivate or apply fertilisers or pesticides to land within 2 m of centre of ditch<br>• Bank vegetation cut once every two years during winter moths, cutting no more than half of total length of ditches<br>• Cleaned between September & January using only mechanical means (including hand tools)<br>• Do not move, re-profile or increase the width or depth of the ditch</p><p><strong>Establishment of hedgerow trees</strong></p><p>• Select locally native tree species<br>• Trees established at irregular spacing at least 20m apart</p><p><strong>Management of woodland edges</strong></p><p>• Do not cultivate or apply fertilisers or manures within 6 m of the woodland edge<br>• Do not feed livestock or locate water troughs near the woodland edge<br>• Only apply herbicides to  control of injurious weeds or invasive non-native species</p><p><strong>Buffering in-field ponds</strong></p><p>• Leave at least 10m between the pond edge & field<br>• Cut no more than once every 5 years<br>• Do not apply fertilisers or manures<br>• Only apply herbicides to control of injurious weeds or invasive non-native species<br>• Limit livestock access</p><p><strong>ARABLE OPTIONS</strong></p><p><strong>Field corner management</strong></p><p>• Establish or maintain a field corner by sowing or natural regeneration<br>• Do not use field corners for regular vehicular access, turning or storage<br>• Only apply herbicides to control of injurious weeds or invasive non-native species<br>• Cut no more than once every 5 years<br>• Do not cut between March & August<br>• Do not apply fertilisers or manure</p><p><strong>Un-harvested cereal headlands</strong></p><p>• 3m+ wide cereal headland along the edge of arable crop<br>• Left unharvest until following spring (March)<br>• Do not apply insecticides between March & following harvest</p><p><strong>Uncropped, cultivated margins for rare plants</strong></p><p>• 3m+ wide margins managed according to the requirements of target species<br>• Do not apply any fertilisers or manures</p><p><strong>Uncropped, cultivated areas for birds</strong></p><p>• A cultivated area (at least 1 ha) retained until end of July<br>• Do not apply any fertilisers or manures</p><p><strong>Over-wintered stubbles</strong></p><p>• Do not apply any pesticides, fertilisers, manures or lime to the stubble<br>• Do not apply pre-harvest desiccants or post-harvest herbicides<br>• Stubble kept until February</p><p><strong>Beetle banks</strong></p><p>• Create or maintain an earth ridge 2m-4m wide sown with a mixture of perennial grasses<br>• Do not apply any pesticides, fertilisers or manures</p><p><strong>Skylark plots</strong></p><p>• Plots created either by leaving an unsown plot or by spraying out the plots by December with a herbicide<br>• Plots should be at least 3m wide and have a minimum area of 16m² and at least 50 m into the field from edge</p><p><strong>Undersow spring cereal</strong></p><p>• Undersow spring cereal crop (not maize) with a grass ley<br>• Keep Undersow plant growth until the cereal crop is harvested<br>• Do not destroy grass ley before July of the following year</p><p><strong>Winter cover crop</strong></p><p>• Establish a cover crop by September to provide a dense cover and protect from soil erosion<br>• Do not apply any fertilisers or manures</p><p><strong>Buffer strips for watercourses</strong></p><p>• Establish or maintain a grassy strip 6m+ wide<br>• Do not apply any fertilisers or manures<br>• Do not use for regular vehicular access, turning or storage<br>• Do not graze the buffer strip<br></p><p><strong>LIVESTOCK OPTIONS</strong></p><p><strong>Maintenance of woodland fences</strong></p><p>• Fences are in a stock-proof condition</p><p><strong>Low input permanent grassland</strong></p><p>• Do not plough, cultivate or re-seed<br>• Total rate of nitrogen must not exceed 100 kg/ha nitrogen per year of which a maximum of 50kg/ha can be inorganic</p><p><strong>Maintenance of watercourse fences</strong></p><p>• Fences in a stock-proof condition to exclude livestock</p>"
-            //                     },
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "None", answer_code: 0 },
-            //                         { answer_name: "1 to 2", answer_code: 1 },
-            //                         { answer_name: "3", answer_code: 2 },
-            //                         { answer_name: "4", answer_code: 3 },
-            //                         { answer_name: "5 or more", answer_code: 4 },
-            //                         { answer_name: "N/A", answer_code: 5 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_rarespecies: {
-            //             title: "Rare species",
-            //             questions: {
-            //                 agrienvironmentalmanagement_rarespecies_monitorflorafauna: {
-            //                     question_name: "Do you survey/monitor flora and fauna species on your farm?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes, and take action to increase numbers of species", answer_code: 0 },
-            //                         { answer_name: "Yes, monitor but don't take action", answer_code: 1 },
-            //                         { answer_name: "No", answer_code: 2 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_rarespecies_rarespecies: {
-            //                     question_name: "How many of the rare/red list species (some of which are listed below) do you have evidence of on your farm?",
-            //                     compulsory: true,
-            //                     helper: {
-            //                         html: true,
-            //                         content: "<table><tbody><tr><th style=\"width: 33%;\">Birds</th><th style=\"width: 33%;\">Butterflies</th><th style=\"width: 33%;\">Mammals</th></tr><tr style=\"vertical-align: top;\"><td>Aquatic warbler<br>Bittern<br>Black grouse<br>Black-tailed godwit<br>Black throated Diver<br>Bullfinch<br>Capercaillie<br>Cirl bunting<br>Common Scoter<br>Corn bunting<br>Corncrake<br>Grasshopper warbler<br>Grey partridge<br>Egyptian Geese<br>European Greater White fronted Goose<br>Fish eagle<br>Hedge Accentor<br>Hen harrier<br>Herring Gull<br>House sparrow<br>Lesser Redpoll<br>Lesser spotted woodpecker<br>Linnet<br>Marsh tit<br>Marsh warbler<br>Nightjar<br>Northern Lapwing<br>Oyster catchers<br>Red-backed shrike<br>Red grouse<br>Red-necked phalarope<br>Reed bunting<br>Ring ouzel<br>Roseate tern<br>Savi's warbler<br>Scottish Crossbill<br>Shell duck<br>Skylark<br>Song thrush<br>Spotted flycatcher<br>Starling<br>Stone Curlew<br>Swallows<br>Swifts<br>Tree pipit<br>Tree sparrow<br>Turtle dove<br>Twite<br>White-tailed eagle<br>Willow tit<br>Woodlark<br>Woodpecker greater spotted<br>Wryneck<br>Yellowhammer<br>Yellow wagtail<br></td><td>Large tortoiseshell<br>Heath fritillary<br>High Brown fritillary<br>Swallowtail<br>Glanville fritillary<br>Silver spotted skipper<br>Grayling<br>Silver studded blue<br>Black hairstreak<br>Chequered skipper<br>Adonis blue<br>Brown hairstreak<br>Duke of Burgundy<br>Lulworth skipper<br>Marsh fritillary<br>Mountain ringlet<br>Northern brown argus<br>Pearl bordered fritillary<br>Purple emperor<br>Silver-studded blue<br>White-letter hairstreak<br>Wood white<br>Large blue<br>Large heath<br>Scotch argus<br>Large Copper Butterfly<br></td><td>Water vole<br>Barbastelle Bat<br>Brown hare<br>Dormouse<br>Bechsteins bat<br>Otter<br>Pine marten<br>Pole cat<br>Greater mouse-eared bat<br>Pipistrelle bat<br>Greater Horseshoe bat<br>Red squirrel<br></td></tr></tbody></table>"
-            //                     },
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_rarespecies_monitorflorafauna",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "0 to 3", answer_code: 0 },
-            //                         { answer_name: "4 to 5", answer_code: 1 },
-            //                         { answer_name: "6 to 7", answer_code: 2 },
-            //                         { answer_name: "8 to 9", answer_code: 3 },
-            //                         { answer_name: "10 or more", answer_code: 4 }
-            //                     ]
-            //                 },
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_conservationplan: {
-            //             title: "Conservation plan",
-            //             questions: {
-            //                 agrienvironmentalmanagement_conservationplan_writtenplan: {
-            //                     question_name: "Do you have a written voluntary conservation plan?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "None", answer_code: 0 },
-            //                         { answer_name: "LEAF", answer_code: 1 },
-            //                         { answer_name: "Whole farm plan developed", answer_code: 2 },
-            //                         { answer_name: "Whole farm conservation plan and acted on /revised regularly", answer_code: 3 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_thirdpartyendorsement: {
-            //             title: "3rd party endorsement",
-            //             questions: {
-            //                 agrienvironmentalmanagement_thirdpartyendorsement_havereceived: {
-            //                     question_name: "Have you received any 3rd party endorsement for your biodiversity activities (including awards but excluding certifications such as organic or LEAF)?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "None", answer_code: 0 },
-            //                         { answer_name: "Yes, local 3rd party endorsement(s)", answer_code: 1 },
-            //                         { answer_name: "Yes, regional 3rd party endorsement(s)", answer_code: 2 },
-            //                         { answer_name: "Yes, national 3rd party endorsement(s)", answer_code: 3 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_habitat: {
-            //             title: "Habitat",
-            //             questions: {
-            //                 agrienvironmentalmanagement_habitat_percpp: {
-            //                     question_name: "Percentage of land which is permanent pasture",
-            //                     compulsory: false,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     auto_calc: true,
-            //                     answer_unit: "%",
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     precedents: [ 'initialdata_crops_permanentpasturearea', 'initialdata_landuse_totalarea' ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_perclowinputpp: {
-            //                     question_name: "Percentage of permanent pasture which is managed as \"low input\" or \"very low input\"",
-            //                     helper: {
-            //                         html: true,
-            //                         content: "<p>As defined on pages 107-8 of the <a href=\"http://publications.naturalengland.org.uk/publication/2810267\" target=\"_blank\">OELS handbook</a> and pages 95-96 of the <a href=\"http://publications.naturalengland.org.uk/publication/2798159\" target=\"_blank\">ELS handbook</a></p>"
-            //                     },
-            //                     compulsory: false,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     auto_calc: true,
-            //                     answer_unit: "%",
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     precedents: [ 'initialdata_crops_permanentpasturearea' ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_bufferstrips: {
-            //                     question_name: "What percentage of your arable area contains buffer strips / field margins?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: 'initialdata_crops_cropname',
-            //                             evaluate: EVALUATORS.NOT_EMPTY
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "0%", answer_code: 1 },
-            //                         { answer_name: "1-25%", answer_code: 2 },
-            //                         { answer_name: "26-50%", answer_code: 3 },
-            //                         { answer_name: "51-75%", answer_code: 4 },
-            //                         { answer_name: "76-100%", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_wintercover: {
-            //                     question_name: "What percentage of your arable land is left as over-wintered stubble or as wild bird cover (wild bird seed mixtures)?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: 'initialdata_crops_cropname',
-            //                             evaluate: EVALUATORS.NOT_EMPTY
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "0%", answer_code: 1 },
-            //                         { answer_name: "1-25%", answer_code: 2 },
-            //                         { answer_name: "26-50%", answer_code: 3 },
-            //                         { answer_name: "51-75%", answer_code: 4 },
-            //                         { answer_name: "76-100%", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_nativewoodland: {
-            //                     question_name: "What is the amount of land that is woodland consisting of native species - broadleaved, mixed or coniferous?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     answer_unit: "ha",
-            //                     answer_limits: { min: 0 },
-            //                     precedents: [ 'initialdata_landuse_totalarea' ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_woodlandmanagement: {
-            //                     question_name: "To what extent do you manage farm woodland?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Not at all", answer_code: 1 },
-            //                         { answer_name: "Manage some woodland edges", answer_code: 2 },
-            //                         { answer_name: "Manage all woodland edges", answer_code: 3 },
-            //                         { answer_name: "Woodland management for conservation/biodiversity", answer_code: 4 },
-            //                         { answer_name: "Very active woodland management for conservation/biodiversity", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_excludelivestock: {
-            //                     question_name: "Do you exclude livestock from woodland?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Yes", answer_code: 1 },
-            //                         { answer_name: "No, but graze as part of wood pasture management", answer_code: 2 },
-            //                         { answer_name: "No", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_protecttrees: {
-            //                     question_name: "Do you protect in-field trees?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Yes", answer_code: 1 },
-            //                         { answer_name: "No", answer_code: 2 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_wildlifehabitat: {
-            //                     question_name: "Do you have wildlife habitats (e.g. wet grassland) or are you restoring and/or establishing wildlife habitats on your land? If so, how much land is a wildlife habitat as a percentage of total land area?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "0-5%", answer_code: 0 },
-            //                         { answer_name: "6-10%", answer_code: 1 },
-            //                         { answer_name: "11-15%", answer_code: 2 },
-            //                         { answer_name: "16-20%", answer_code: 3 },
-            //                         { answer_name: ">20%", answer_code: 4 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_monitor: {
-            //                     question_name: "Do you monitor habitats and maintain them as necessary to ensure that they are in good condition, if so how regularly?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Not monitored", answer_code: 1 },
-            //                         { answer_name: "Monitored rarely (5+ years)", answer_code: 2 },
-            //                         { answer_name: "Monitored infrequently (3 years) and maintained if necessary or carry out standard maintenance without monitoring", answer_code: 3 },
-            //                         { answer_name: "Monitored frequently (2 years) and maintained if necessary", answer_code: 4 },
-            //                         { answer_name: "Monitored regularly (yearly) and maintained if necessary", answer_code: 5 }
-            //                     ]
-            //                 },
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_pesticides: {
-            //             title: "Herbicide and other pesticide use",
-            //             helper: {
-            //                 html: true,
-            //                 content: "<p>These questions are derived from the <a href=\"www.voluntaryinitiative.org.uk\" target=\"_blank\">Voluntary Initiative</a>, the DEFRA booklet on <a href=\"http://adlib.everysite.co.uk/adlib/defra/content.aspx?id=000IL3890W.197YTQKKNYWEFG\" target=\"_blank\">\"Pesticides and Integrated Farm Management\"</a>, and the DEFRA, HSC and Welsh government booklet <a href=\"http://adlib.everysite.co.uk/adlib/defra/content.aspx?id=000HK277ZX.0D4VT736AL655T\" target=\"_blank\">\"Pesticides: Code of practice for using plant protection products\"</a></p>"
-            //             },
-            //             questions: {
-            //                 agrienvironmentalmanagement_pesticides_use: {
-            //                     question_name: "Do you use herbicides, insecticides, fungicides or other products (e.g. straw shorteners)?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes, on a field scale", answer_code: 0 },
-            //                         { answer_name: "Yes, but only spot treatment", answer_code: 1 },
-            //                         { answer_name: "No", answer_code: 2 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_avoid: {
-            //                     question_name: "When using such products do you avoid ponds, hedgerows, woodland, rough grazing and species-rich grassland?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes", answer_code: 0 },
-            //                         { answer_name: "Mostly", answer_code: 1 },
-            //                         { answer_name: "No", answer_code: 2 },
-            //                         { answer_name: "N/A", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_impact: {
-            //                     question_name: "When using pesticides/other control measures do you consider impact on beneficial species?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes, and target applications to minimise environmental impact", answer_code: 0 },
-            //                         { answer_name: "Yes, monitor impact and act on results", answer_code: 1 },
-            //                         { answer_name: "Yes, monitor impact", answer_code: 2 },
-            //                         { answer_name: "No", answer_code: 3 },
-            //                         { answer_name: "N/A", answer_code: 4 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_amount: {
-            //                     question_name: "When using pesticides/other control measures, how do you decide on amounts to use?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Use same amount each year / estimate amount", answer_code: 0 },
-            //                         { answer_name: "Based on advice on label of product", answer_code: 1 },
-            //                         { answer_name: "Evaluation of risk from pests and dosing to reduce it to a non-damaging level", answer_code: 2 },
-            //                         { answer_name: "Using advice from a BASIS qualified advisor", answer_code: 3 },
-            //                         { answer_name: "N/A", answer_code: 4 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_sprayer: {
-            //                     question_name: "How often do you calibrate and maintain the sprayer?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Don't do so", answer_code: 0 },
-            //                         { answer_name: "Only if there's an issue", answer_code: 1 },
-            //                         { answer_name: "Every two years", answer_code: 2 },
-            //                         { answer_name: "Annually", answer_code: 3 },
-            //                         { answer_name: "Every time the sprayer is used", answer_code: 4 },
-            //                         { answer_name: "N/A", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_watercontamination: {
-            //                     question_name: "Do you take action to prevent contamination of water courses, lakes and ponds?",
-            //                     helper: {
-            //                         html: false,
-            //                         content: "Considering not just sprays but also granular products such as metaldehyde."
-            //                     },
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes, I carry out 3 or more of the precautions listed here: store away from drains and water courses, use low drift techniques when spraying (avoid windy conditions, reduce boom height, change nozzles, use buffer zones)", answer_code: 0 },
-            //                         { answer_name: "Yes, I carry out 1 or 2 of the precautions listed here: store away from drains and water courses, use low drift techniques when spraying (avoid windy conditions, reduce boom height, change nozzles, use buffer zones)", answer_code: 1 },
-            //                         { answer_name: "No", answer_code: 2 },
-            //                         { answer_name: "N/A", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_beessafety: {
-            //                     question_name: "Do you consider the safety of bees when selecting which pesticides to use?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes", answer_code: 0 },
-            //                         { answer_name: "No", answer_code: 1 },
-            //                         { answer_name: "N/A", answer_code: 2 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_beessafetyspray: {
-            //                     question_name: "Do you consider the safety of bees by spraying late in the evening when they are not working and by not spraying flowering plants?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes", answer_code: 0 },
-            //                         { answer_name: "No", answer_code: 1 },
-            //                         { answer_name: "N/A", answer_code: 2 }
-            //                     ]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_birdssafety: {
-            //                     question_name: "Do you consider the safety of birds when using dressed seeds or pesticides in granular/pellet form by ensuring that they do not remain on the soil surface but are fully incorporated?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "agrienvironmentalmanagement_pesticides_use",
-            //                             evaluate: EVALUATORS.IS_ONE_OF,
-            //                             value: [ 0, 1 ]
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Yes", answer_code: 0 },
-            //                         { answer_name: "No", answer_code: 1 },
-            //                         { answer_name: "N/A", answer_code: 2 }
-            //                     ]
-            //                 },
-            //             }
-            //         }
-            //     }
-            // },
             landscapeheritage: {
                 title: "Landscape and Heritage Features",
                 indicators: {
@@ -8711,8 +8314,8 @@ function PGTOOL() {
                             content: "Based on Nature on the Map (Natural England, 2010)"
                         },
                         questions: {
-                            landscapeheritage_landscapefeatures_characteristicfarm: {
-                                question_name: "How characteristic is the farm compared to traditional farms in your area?",
+                            landscapeheritage_landscapefeatures_siteselection: {
+                                question_name: "Do you carefully select the sites for growing non-food crops including non-food trees (e.g. sitting on marginal land)?",
                                 compulsory: true,
                                 question_type: QUESTION_TYPE.DROPDOWN,
                                 answer_list: [
@@ -8720,7 +8323,8 @@ function PGTOOL() {
                                     { answer_name: "Little", answer_code: 1 },
                                     { answer_name: "Partially", answer_code: 2 },
                                     { answer_name: "Mostly", answer_code: 3 },
-                                    { answer_name: "Fully", answer_code: 4 }
+                                    { answer_name: "Fully", answer_code: 4 },
+                                    { answer_name: "N/A", answer_code: 5}
                                 ]
                             },
                         }
@@ -8783,284 +8387,6 @@ function PGTOOL() {
                     }
                 }
             },
-            // water: {
-            //     title: "Water Management",
-            //     indicators: {
-            //         water_protection: {
-            //             title: "Implementation of measures to minimise water pollution and maximise water efficiency",
-            //             questions: {
-            //                 water_protection_actions: {
-            //                     question_name: "What intensity of action(s) is/are being taken for water resource protection?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "No action being taken", answer_code: 0 },
-            //                         { answer_name: "Low intensity actions being taken, eg: selecting suitable stock types and levels", answer_code: 1 },
-            //                         { answer_name: "Medium intensity actions being taken, eg: non inversion tillage or contour ploughing", answer_code: 2 },
-            //                         { answer_name: "High intensity actions being taken, eg: planting and maintaining riparian/buffer strips", answer_code: 3 },
-            //                         { answer_name: "N/A", answer_code: 4 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         water_flood: {
-            //             title: "Flood defence and runoff prevention",
-            //             questions: {
-            //                 water_flood_mitigationsystem: {
-            //                     question_name: "What is the condition of your flood defense or water runoff mitigation system?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Non-existent / Don't know", answer_code: 0 },
-            //                         { answer_name: "Poor", answer_code: 1 },
-            //                         { answer_name: "Average", answer_code: 2 },
-            //                         { answer_name: "Above average", answer_code: 3 },
-            //                         { answer_name: "Very good", answer_code: 4 },
-            //                         { answer_name: "N/A", answer_code: 5 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         water_plan: {
-            //             title: "Water audit and management plan",
-            //             questions: {
-            //                 water_plan_completed: {
-            //                     question_name: "Have you completed a water audit/management plan and if so are you acting on it?",
-            //                     compulsory: true,
-            //                     helper: {
-            //                         html: false,
-            //                         content: "If you abstract water or irrigate you should (and from 2012 you must) draw up and implement a water management plan to assess and minimise your impact on the local water resources."
-            //                     },
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "No", answer_code: 0 },
-            //                         { answer_name: "Yes but not acting on yet", answer_code: 1 },
-            //                         { answer_name: "Yes and acting on partly", answer_code: 2 },
-            //                         { answer_name: "Yes and acting on mostly", answer_code: 3 },
-            //                         { answer_name: "Yes and acting on fully", answer_code: 4 },
-            //                         { answer_name: "N/A", answer_code: 5 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         water_harvesting: {
-            //             title: "Water harvesting",
-            //             questions: {
-            //                 water_harvesting_recycled: {
-            //                     question_name: "How much of the water you use on farm is recycled?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "None", answer_code: 0 },
-            //                         { answer_name: "Little", answer_code: 1 },
-            //                         { answer_name: "More than half", answer_code: 2 },
-            //                         { answer_name: "Most", answer_code: 3 },
-            //                         { answer_name: "N/A", answer_code: 4 }
-            //                     ]
-            //                 },
-            //                 water_harvesting_raingroundwater: {
-            //                     question_name: "How much rainwater or groundwater do you harvest for use on farm?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "None", answer_code: 0 },
-            //                         { answer_name: "Little", answer_code: 1 },
-            //                         { answer_name: "A significant amount", answer_code: 2 },
-            //                         { answer_name: "A large amount", answer_code: 3 },
-            //                         { answer_name: "N/A", answer_code: 4 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         water_irrigation: {
-            //             title: "Irrigation",
-            //             helper: {
-            //                 html: false,
-            //                 content: "Based on Improving irrigation efficiency checklist (Cranfield University at Silsoe, 2007)"
-            //             },
-            //             questions: {
-            //                 water_irrigation_crops: {
-            //                     question_name: "Do you irrigate crops?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: 'initialdata_landuse_totalUAA',
-            //                             evaluate: EVALUATORS.GREATER_THAN,
-            //                             value: 0
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "No", answer_code: 0 },
-            //                         { answer_name: "Yes", answer_code: 1 },
-            //                         { answer_name: "N/A", answer_code: 2 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_uaairrigated: {
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         },
-            //                         {
-            //                             question: 'initialdata_landuse_totalUAA',
-            //                             evaluate: EVALUATORS.GREATER_THAN,
-            //                             value: 0
-            //                         }
-            //                     ],
-            //                     question_name: "What % of Utilised Agricultural Area (UAA) is irrigated using mains or abstracted water?",
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "0-20%", answer_code: 1 },
-            //                         { answer_name: "21-40%", answer_code: 2 },
-            //                         { answer_name: "41-60%", answer_code: 3 },
-            //                         { answer_name: "61-80%", answer_code: 4 },
-            //                         { answer_name: "81-100%", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_appsystem: {
-            //                     question_name: "What application system do you use?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Rain Gun", answer_code: 1 },
-            //                         { answer_name: "Boom", answer_code: 2 },
-            //                         { answer_name: "Trickle", answer_code: 3 },
-            //                         { answer_name: "Mix of the above", answer_code: 4 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_rate: {
-            //                     question_name: "Do you know the rate of water (e.g. cubic metres per hour) applied by your system?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "No", answer_code: 1 },
-            //                         { answer_name: "Based on manufacturers recommendation", answer_code: 2 },
-            //                         { answer_name: "Measured a long time ago", answer_code: 3 },
-            //                         { answer_name: "Measured infrequently", answer_code: 4 },
-            //                         { answer_name: "Measured routinely", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_pressure: {
-            //                     question_name: "Does your irrigation system operate at its design pressure in each field?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "No", answer_code: 1 },
-            //                         { answer_name: "Don't know", answer_code: 2 },
-            //                         { answer_name: "Yes in some fields", answer_code: 3 },
-            //                         { answer_name: "Yes in most fields", answer_code: 4 },
-            //                         { answer_name: "Yes in all fields", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_uniformity: {
-            //                     question_name: "How uniformly does your system apply water within each field?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Don't know", answer_code: 1 },
-            //                         { answer_name: "Major variation", answer_code: 2 },
-            //                         { answer_name: "Some variation", answer_code: 3 },
-            //                         { answer_name: "Minor variation", answer_code: 4 },
-            //                         { answer_name: "Very little variation", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_weatherconditions: {
-            //                     question_name: "Do you modify your irrigation applications in response to forecast/weather conditions?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "No", answer_code: 1 },
-            //                         { answer_name: "Yes infrequently", answer_code: 2 },
-            //                         { answer_name: "Yes regularly", answer_code: 3 },
-            //                         { answer_name: "Yes often", answer_code: 4 },
-            //                         { answer_name: "Yes always", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_summerirri: {
-            //                     question_name: "Do you summer irrigate from mains/abstracted water or collect/store water over winter and extract when necessary?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Summer irrigate from mains/abstracted water", answer_code: 1 },
-            //                         { answer_name: "Summer irrigate from stored/collected water", answer_code: 2 }
-            //                     ]
-            //                 },
-            //                 water_irrigation_system: {
-            //                     question_name: "What is the physical condition of your pumping, distribution and application system?",
-            //                     compulsory: true,
-            //                     compulsoryIf: [
-            //                         {
-            //                             question: "water_irrigation_crops",
-            //                             evaluate: EVALUATORS.EQUALS,
-            //                             value: 1
-            //                         }
-            //                     ],
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Don't know", answer_code: 1 },
-            //                         { answer_name: "Poor", answer_code: 2 },
-            //                         { answer_name: "Average", answer_code: 3 },
-            //                         { answer_name: "Above average", answer_code: 4 },
-            //                         { answer_name: "Very good condition", answer_code: 5 }
-            //                     ]
-            //                 },
-            //             }
-            //         }
-            //     }
-            // },
             npkbudget: {
                 title: "NPK budget",
                 indicators: {
@@ -10872,306 +10198,6 @@ function PGTOOL() {
                     },
                 }
             },
-            // fertiliserman: {
-            //     title: "Fertiliser management",
-            //     indicators: {
-            //         fertiliserman_fertiliser: {
-            //             title: "Fertiliser management and application",
-            //             questions: {
-            //                 fertiliserman_fertiliser_spreaders: {
-            //                     question_name: "How often are fertiliser spreaders inspected and maintained?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Never", answer_code: 1 },
-            //                         { answer_name: "Every year", answer_code: 2 },
-            //                         { answer_name: "Every six months", answer_code: 3 },
-            //                         { answer_name: "Every 2-3 months", answer_code: 4 },
-            //                         { answer_name: "Each time the spreader(s) is/are used", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_fertiliser_rates: {
-            //                     question_name: "How regularly are fertiliser application rates checked during the growing / spreading season?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Every 3+ months / Rarely tested", answer_code: 1 },
-            //                         { answer_name: "Every 2-3 months", answer_code: 2 },
-            //                         { answer_name: "Every month", answer_code: 3 },
-            //                         { answer_name: "Every week", answer_code: 4 },
-            //                         { answer_name: "Every day / Before each application", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_fertiliser_nfertilisers: {
-            //                     question_name: "At what time(s) of year do you spread manufactured nitrogen fertilisers?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Autumn/winter only", answer_code: 1 },
-            //                         { answer_name: "Part autumn/winter, part spring", answer_code: 2 },
-            //                         { answer_name: "Spring/summer only", answer_code: 3 }
-            //                     ]
-            //                 },
-            //             }
-            //         },
-            //         fertiliserman_nutrientplanning: {
-            //             title: "Nutrient planning",
-            //             questions: {
-            //                 fertiliserman_nutrientplanning_levelapplication: {
-            //                     question_name: "How do you determine the level of nutrient application for crops?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Ad-hoc basis", answer_code: 1 },
-            //                         { answer_name: "NVZ compliance limit", answer_code: 2 },
-            //                         { answer_name: "Limit set by organic standards", answer_code: 3 },
-            //                         { answer_name: "Using a nutrient budget software/manual", answer_code: 4 },
-            //                         { answer_name: "Through advice from a FACTS qualified advisor", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_nutrientplanning_monitornutrientlevels: {
-            //                     question_name: "How regularly do you monitor/record levels of major nutrients (e.g. P, K, Mg, C, S) in the soil?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Never", answer_code: 1 },
-            //                         { answer_name: "I test every 5+ years", answer_code: 2 },
-            //                         { answer_name: "I test a few fields every few years", answer_code: 3 },
-            //                         { answer_name: "I test some fields every two years", answer_code: 4 },
-            //                         { answer_name: "I test some fields every year to monitor long-term change", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_nutrientplanning_stafftraining: {
-            //                     question_name: "To what extent are staff trained in the accurate/efficient application of nutrients to crops?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "No training provided", answer_code: 1 },
-            //                         { answer_name: "Some internal training provided", answer_code: 2 },
-            //                         { answer_name: "Full training / external certification provided", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_nutrientplanning_organiccompostscontent: {
-            //                     question_name: "Do you know the N, P, K content of organic manures/composts applied?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "No", answer_code: 1 },
-            //                         { answer_name: "Some limited information", answer_code: 2 },
-            //                         { answer_name: "Yes - use data from literature", answer_code: 3 },
-            //                         { answer_name: "Yes - analysed", answer_code: 4 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         fertiliserman_manureman: {
-            //             title: "Manure management",
-            //             question_groups: {
-            //                 fertiliserman_manuremanstorage: {
-            //                     title: "Manure storage",
-            //                     question_group_type: QUESTION_GROUP_TYPE.TABLE_HEADERS_LEFT,
-            //                     question_codes: [
-            //                         [ 'fertiliserman_manureman_storemanure' ],
-            //                         [ 'fertiliserman_manureman_storeslurry' ],
-            //                         [ 'fertiliserman_manureman_storeslurryfloor' ],
-            //                         [ 'fertiliserman_manureman_storeslurrycapacity' ],
-            //                         [ 'fertiliserman_manureman_storeslurryinspect' ]
-            //                     ]
-            //                 },
-            //                 fertiliserman_manuremanapplication: {
-            //                     title: "Manure application",
-            //                     question_group_type: QUESTION_GROUP_TYPE.TABLE_HEADERS_LEFT,
-            //                     question_codes: [
-            //                         [ 'fertiliserman_manureman_spreadslurry' ],
-            //                         [ 'fertiliserman_manureman_slurryapplications' ],
-            //                         [ 'fertiliserman_manureman_timespread' ],
-            //                         [ 'fertiliserman_manureman_incorporateslurry' ],
-            //                         [ 'fertiliserman_manureman_incorporatemanure' ]
-            //                     ]
-            //                 }
-            //             },
-            //             questions: {
-            //                 fertiliserman_manureman_storemanure: {
-            //                     question_name: "How do you predominantly store/manage manure on farm?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanstorage',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Unmanaged stacked", answer_code: 1 },
-            //                         { answer_name: "Windrows/composting on field", answer_code: 2 },
-            //                         { answer_name: "Managed and stacked - composted on hard standing without impermeable cover", answer_code: 3 },
-            //                         { answer_name: "Windrows/composting on field with impermeable cover", answer_code: 4 },
-            //                         { answer_name: "Windrows/composting with impermeable cover on hard standing", answer_code: 5 },
-            //                         { answer_name: "Windrows/composting with impermeable cover and on hard standing with run-off collection system", answer_code: 6 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_storeslurry: {
-            //                     question_name: "How do you predominantly store slurry?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanstorage',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Uncovered lagoon or tank", answer_code: 1 },
-            //                         { answer_name: "Covered lagoon or tank", answer_code: 2 },
-            //                         { answer_name: "Covered and aerated lagoon or tank", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_storeslurryfloor: {
-            //                     question_name: "What is the condition of the floor for your slurry storage system?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanstorage',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Entire floor area is not impermeable", answer_code: 1 },
-            //                         { answer_name: "Some of floor area is impermeable", answer_code: 2 },
-            //                         { answer_name: "Entire floor area is impermeable", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_storeslurrycapacity: {
-            //                     question_name: "How many months storage capacity do you have for slurry/dirty water?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanstorage',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "0 to 2", answer_code: 1 },
-            //                         { answer_name: "2 to 4", answer_code: 2 },
-            //                         { answer_name: "4 or more", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_storeslurryinspect: {
-            //                     question_name: "How often do you completely empty and inspect manure/slurry storage facilities?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanstorage',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Rarely", answer_code: 1 },
-            //                         { answer_name: "Every 2 years", answer_code: 2 },
-            //                         { answer_name: "Annually", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_spreadslurry: {
-            //                     question_name: "How do you spread slurry?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanapplication',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Plate spreader", answer_code: 1 },
-            //                         { answer_name: "Band spreader", answer_code: 2 },
-            //                         { answer_name: "Trailing shoe", answer_code: 3 },
-            //                         { answer_name: "Slurry injector", answer_code: 4 },
-            //                         { answer_name: "Other (please specify)", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_slurryapplications: {
-            //                     question_name: "What time period do you leave between FYM and/or slurry applications?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanapplication',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "1-2 weeks", answer_code: 1 },
-            //                         { answer_name: "2-3 weeks", answer_code: 2 },
-            //                         { answer_name: "4-5 weeks", answer_code: 3 },
-            //                         { answer_name: "6 weeks or more", answer_code: 4 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_timespread: {
-            //                     question_name: "At what time of year do you spread manures/slurries?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanapplication',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Autumn only", answer_code: 1 },
-            //                         { answer_name: "Part autumn/part spring", answer_code: 2 },
-            //                         { answer_name: "Spring/summer only", answer_code: 3 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_incorporateslurry: {
-            //                     question_name: "How many hours after spreading do you incorporate slurries?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanapplication',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "More than 6 hours after spreading", answer_code: 1 },
-            //                         { answer_name: "Within 6 hours of spreading", answer_code: 2 },
-            //                         { answer_name: "Within 4 hours of spreading", answer_code: 3 },
-            //                         { answer_name: "Within 2 hours of spreading", answer_code: 4 },
-            //                         { answer_name: "Immediate incorporation", answer_code: 5 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_manureman_incorporatemanure: {
-            //                     question_name: "How many hours after spreading do you incorporate solid manures?",
-            //                     compulsory: true,
-            //                     question_group: 'fertiliserman_manuremanapplication',
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "More than 24 hours after spreading", answer_code: 1 },
-            //                         { answer_name: "Within 24 hours of spreading", answer_code: 2 },
-            //                         { answer_name: "Within 12 hours of spreading", answer_code: 3 },
-            //                         { answer_name: "Immediately after spreading", answer_code: 4 }
-            //                     ]
-            //                 },
-            //             }
-            //         },
-            //         fertiliserman_farmwaste: {
-            //             title: "Farm waste disposal",
-            //             questions: {
-            //                 fertiliserman_farmwaste_recycled: {
-            //                     question_name: "What percentage of farm waste (e.g. plastics, metals, timber etc) is recycled?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "0-15%", answer_code: 0 },
-            //                         { answer_name: "15-30%", answer_code: 1 },
-            //                         { answer_name: "30-45%", answer_code: 2 },
-            //                         { answer_name: "45-60%", answer_code: 3 },
-            //                         { answer_name: "60%+", answer_code: 4 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_farmwaste_medicinedisposal: {
-            //                     question_name: "How do you dispose of unused/unwanted medicines?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "N/A", answer_code: 0 },
-            //                         { answer_name: "Flush down sink,  drain or sewer", answer_code: 1 },
-            //                         { answer_name: "Landfill site", answer_code: 2 },
-            //                         { answer_name: "Return to supplier - unsure how they dispose of the medicine", answer_code: 3 },
-            //                         { answer_name: "Return to supplier (e.g. vet) - they carry out clinical incineration", answer_code: 4 },
-            //                         { answer_name: "On-farm incineration", answer_code: 5 },
-            //                         { answer_name: "Clinical incineration", answer_code: 6 }
-            //                     ]
-            //                 },
-            //                 fertiliserman_farmwaste_wastestrategy: {
-            //                     question_name: "Does the farm have a written waste strategy (i.e. detailing waste avoidance strategies, waste disposal, etc)?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "No", answer_code: 0 },
-            //                         { answer_name: "Have a written plan", answer_code: 1 },
-            //                         { answer_name: "Have a written plan which is updated regularly", answer_code: 2 }
-            //                     ]
-            //                 },
-            //             }
-            //         }
-            //     }
-            // },
             energycarbon: {
                 title: "Energy and Carbon",
                 indicators: {
@@ -12144,7 +11170,7 @@ function PGTOOL() {
                     energycarbon_carbonstocks: {
                         title: "Carbon Stocks and Sequestration",
                         question_groups: {
-                            energycarbon_carbonstocks: {
+                            energycarbon_carbonstocksgroup: {
                                 question_group_type: QUESTION_GROUP_TYPE.TABLE,
                                 question_group_headers: {
                                     columns: [ 
@@ -12199,7 +11225,7 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "Ha"
                             },
@@ -12207,7 +11233,7 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland - sequestration',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12215,14 +11241,14 @@ function PGTOOL() {
                                 question_name: '% crop residues left on soil surface',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 answer_unit: "%"
                             },
                             energycarbon_carbonstocks_residueseq: {
                                 question_name: '% crop residues left on soil surface - sequestration',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12230,14 +11256,14 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 answer_unit: "%"
                             },
                             energycarbon_carbonstocks_coverseq: {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12245,14 +11271,14 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 answer_unit: "%"
                             },
                             energycarbon_carbonstocks_nitrogenseq: {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12260,7 +11286,7 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "Ha"
                             },
@@ -12268,7 +11294,7 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12276,7 +11302,7 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "Ha"
                             },
@@ -12284,7 +11310,7 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12292,14 +11318,14 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 answer_unit: "Ha"
                             },
                             energycarbon_carbonstocks_fruitseq: {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12307,14 +11333,14 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 answer_unit: "Ha"
                             },
                             energycarbon_carbonstocks_woodland50seq: {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12322,14 +11348,14 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 answer_unit: "%"
                             },
                             energycarbon_carbonstocks_managedseq: {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12337,14 +11363,14 @@ function PGTOOL() {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 answer_unit: "Ha"
                             },
                             energycarbon_carbonstocks_woodland49seq: {
                                 question_name: 'Total land under arable or temporary grassland',
                                 compulsory: false,
                                 question_type: QUESTION_TYPE.NUMBER,
-                                question_group: 'energycarbon_carbonstocks',
+                                question_group: 'energycarbon_carbonstocksgroup',
                                 auto_calc: true,
                                 answer_unit: "tCO2e/year",
                             },
@@ -12368,176 +11394,6 @@ function PGTOOL() {
                     }
                 }
             },
-            // foodsecurity: {
-            //     title: "Food Security",
-            //     indicators: {
-            //         foodsecurity_totalprodutivity: {
-            //             title: "Total produtivity",
-            //             questions: {
-            //                 foodsecurity_totalprodutivity_yield: {
-            //                     question_name: "How would you describe your yield compared with average yields for similar types of farm?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "Well above average", answer_code: 0 },
-            //                         { answer_name: "Slightly above average", answer_code: 1 },
-            //                         { answer_name: "Average", answer_code: 2 },
-            //                         { answer_name: "Slightly below average", answer_code: 3 },
-            //                         { answer_name: "Well below average", answer_code: 4 },
-            //                     ]
-            //                 },
-            //             }
-            //         },
-            //         foodsecurity_localfood: {
-            //             title: "Local food",
-            //             question_groups: {
-            //                 foodsecurity_localfoodgroup: {
-            //                     heading: {
-            //                         html: false,
-            //                         content: "Approximately what percentage of your produce (by weight) is sold to the following:"
-            //                     },
-            //                     helper: {
-            //                         html: false,
-            //                         content: "This is likely to be an estimate especially where middle men are used and you're unsure of the location of the final sale, therefore use your discretion in allocating these percentages."
-            //                     },
-            //                     guidance: {
-            //                         html: true,
-            //                         content: "Based on Lobley M., Reed M., Butler A. (2005) <a href=\"https://orgprints.org/id/eprint/10114/\" target=\"_blank\">The impact of Organic Farming on the Rural Economy in England</a>, Final report to DEFRA, CRR Research report no 11"
-            //                     },
-            //                     question_group_type: QUESTION_GROUP_TYPE.TABLE_HEADERS_LEFT,
-            //                     question_group_headers: {
-            //                         rows: [
-            //                             "Local sales (<10 miles)",
-            //                             "County sales",
-            //                             "Regional sales",
-            //                             "National sales",
-            //                             "International sales"
-            //                         ]
-            //                     },
-            //                     question_codes: [
-            //                         [ 'foodsecurity_localfood_localsales' ],
-            //                         [ 'foodsecurity_localfood_countysales' ],
-            //                         [ 'foodsecurity_localfood_regionalsales' ],
-            //                         [ 'foodsecurity_localfood_nationalsales' ],
-            //                         [ 'foodsecurity_localfood_internationalsales' ]
-            //                     ]
-            //                 }
-            //             },
-            //             questions: {
-            //                 foodsecurity_localfood_localsales: {
-            //                     question_name: "Approximately what percentage of your produce (by weight) is sold to local sales (<10 miles)",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     question_group: 'foodsecurity_localfoodgroup',
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     answer_unit: "%"
-            //                 },
-            //                 foodsecurity_localfood_countysales: {
-            //                     question_name: "Approximately what percentage of your produce (by weight) is sold to county sales",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     question_group: 'foodsecurity_localfoodgroup',
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     answer_unit: "%"
-            //                 },
-            //                 foodsecurity_localfood_regionalsales: {
-            //                     question_name: "Approximately what percentage of your produce (by weight) is sold to regional sales",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     question_group: 'foodsecurity_localfoodgroup',
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     answer_unit: "%"
-            //                 },
-            //                 foodsecurity_localfood_nationalsales: {
-            //                     question_name: "Approximately what percentage of your produce (by weight) is sold to national sales",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     question_group: 'foodsecurity_localfoodgroup',
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     answer_unit: "%"
-            //                 },
-            //                 foodsecurity_localfood_internationalsales: {
-            //                     question_name: "Approximately what percentage of your produce (by weight) is sold to national sales",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     question_group: 'foodsecurity_localfoodgroup',
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     answer_unit: "%"
-            //                 },
-            //             }
-            //         },
-            //         foodsecurity_offfarmfeed: {
-            //             title: "Off farm feed",
-            //             questions: {
-            //                 foodsecurity_offfarmfeed_feed: {
-            //                     question_name: "What percentage of your total feed (forage and concentrate) is bought in from off-farm?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     answer_unit: "%"
-            //                 },
-            //             }
-            //         },
-            //         foodsecurity_thirdpartyendorsement: {
-            //             title: "3rd party endorsement",
-            //             questions: {
-            //                 foodsecurity_thirdpartyendorsement_havereceived: {
-            //                     question_name: "Have you received any 3rd party endorsement for for food quality/local food production (including awards but excluding certifications)?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "None", answer_code: 0 },
-            //                         { answer_name: "Yes, local 3rd party endorsement(s)", answer_code: 1 },
-            //                         { answer_name: "Yes, regional 3rd party endorsement(s)", answer_code: 2 },
-            //                         { answer_name: "Yes, national 3rd party endorsement(s)", answer_code: 3 }
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         foodsecurity_foodqualitycertification: {
-            //             title: "Food quality certification",
-            //             questions: {
-            //                 foodsecurity_foodqualitycertification_certificationlevel: {
-            //                     question_name: "What level of food quality certification do you have?",
-            //                     compulsory: true,
-            //                     question_type: QUESTION_TYPE.DROPDOWN,
-            //                     answer_list: [
-            //                         { answer_name: "None", answer_code: 0 },
-            //                         { answer_name: "Farm assured/red tractor", answer_code: 1 },
-            //                         { answer_name: "Global GAP/Europe GAP/Organic certification", answer_code: 2 }
-            //                     ]
-            //                 },
-            //             }
-            //         },
-            //         foodsecurity_freshproduce: {
-            //             title: "Production of fresh produce",
-            //             questions: {
-            //                 foodsecurity_freshproduce_fruitrootsvegetables: {
-            //                     question_name: "Hectares of farm used to grow fruit, roots and other vegetables",
-            //                     helper: {
-            //                         html: false,
-            //                         content: "Leave blank if this question is not applicable"
-            //                     },
-            //                     compulsory: false,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     answer_limits: { min: 0 },
-            //                     answer_unit: "ha"
-            //                 },
-            //                 foodsecurity_freshproduce_humanconsumption: {
-            //                     question_name: "What percentage (by weight) of your crops would you estimate goes for human consumption rather than animal consumption?",
-            //                     helper: {
-            //                         html: false,
-            //                         content: "Leave blank if this question is not applicable"
-            //                     },
-            //                     compulsory: false,
-            //                     question_type: QUESTION_TYPE.NUMBER,
-            //                     answer_limits: { min: 0, max: 100 },
-            //                     answer_unit: "%"
-            //                 },
-            //             }
-            //         },
-            //     }
-            // },
             agriculturalsystemsdiversity: {
                 title: "Agricultural systems diversity",
                 indicators: {
@@ -12819,6 +11675,18 @@ function PGTOOL() {
                             },
                         }
                     },
+                    agriculturalsystemsdiversity_woodyperennial: {
+                        title: "Woody Perrenial Land",
+                        questions: {
+                            agriculturalsystemsdiversity_woodyperennial_area: {
+                                question_name: "Woody prennial land area as % of total land",
+                                compulsory: false,
+                                auto_calc: true,
+                                question_type: QUESTION_TYPE.NUMBER,
+                                answer_unit: "%"
+                            }
+                        }
+                    },
                     agriculturalsystemsdiversity_marketingoutlets: {
                         title: "Marketing outlets",
                         questions: {
@@ -13069,7 +11937,7 @@ function PGTOOL() {
                                 answer_list: [
                                     { answer_name: "Information boards", answer_code: 0 },
                                     { answer_name: "Farm walks", answer_code: 1 },
-                                    { answer_name: "Website", answer_code: 2 },
+                                    { answer_name: "Website/Social Media (regularly maintained)", answer_code: 2 },
                                     { answer_name: "Farm shop", answer_code: 3 },
                                     { answer_name: "Farmers' markets", answer_code: 4 },
                                     { answer_name: "Research/demonstrating projects", answer_code: 5 },
@@ -14516,7 +13384,7 @@ function PGTOOL() {
                                     { answer_name: "Member of co-operative groups that, together, cover all stakeholder groups", answer_code: 0 },
                                     { answer_name: "In regular conversation in an unofficial capacity with all stakeholder groups", answer_code: 1 },
                                     { answer_name: "Regular meeting and co-operative working with other producers", answer_code: 2 },
-                                    { answer_name: "Work coo-operatively with other producer on an irregular basis", answer_code: 3 },
+                                    { answer_name: "Work co-operatively with other producer on an irregular basis", answer_code: 3 },
                                     { answer_name: "Work independently except where input is obligatory", answer_code: 4 }
                                 ]
                             }
@@ -14704,282 +13572,6 @@ function PGTOOL() {
                     }
                 }
             },
-            // agrienvironmentalmanagement: {
-            //     total: categoryTotalFn,
-            //     indicators: {
-            //         agrienvironmentalmanagement_participation: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 agrienvironmentalmanagement_participation_howmanyoptions: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 4,
-            //                         4: 5,
-            //                         5: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_rarespecies: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 agrienvironmentalmanagement_rarespecies_monitorflorafauna: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 3,
-            //                         2: 1
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_rarespecies_rarespecies: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 4,
-            //                         4: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_conservationplan: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 agrienvironmentalmanagement_conservationplan_writtenplan: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 3,
-            //                         2: 4,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_thirdpartyendorsement: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 agrienvironmentalmanagement_thirdpartyendorsement_havereceived: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_habitat: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 agrienvironmentalmanagement_habitat_percpp: function() {
-            //                     var avalue = get('agrienvironmentalmanagement_habitat_percpp')
-            //                     if (avalue < 5) {
-            //                         return 1
-            //                     } else if (avalue < 10) {
-            //                         return 2
-            //                     } else if (avalue < 15) {
-            //                         return 3
-            //                     } else if (avalue < 20) {
-            //                         return 4
-            //                     } else {
-            //                         return 5
-            //                     }
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_perclowinputpp: function() {
-            //                     var avalue = get('agrienvironmentalmanagement_habitat_perclowinputpp')
-            //                     if (avalue == 0) {
-            //                         return 1
-            //                     } else if (avalue < 25) {
-            //                         return 2
-            //                     } else if (avalue < 50) {
-            //                         return 3
-            //                     } else if (avalue < 75) {
-            //                         return 4
-            //                     } else {
-            //                         return 5
-            //                     }
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_bufferstrips: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_wintercover: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_nativewoodland: function() {
-            //                     var avalue = calculatePercentage(get('agrienvironmentalmanagement_habitat_nativewoodland'), get('initialdata_landuse_totalarea'))
-            //                     if (avalue < 5) {
-            //                         return 1
-            //                     } else if (avalue < 10) {
-            //                         return 2
-            //                     } else if (avalue < 15) {
-            //                         return 3
-            //                     } else if (avalue < 20) {
-            //                         return 4
-            //                     } else {
-            //                         return 5
-            //                     }
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_woodlandmanagement: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_excludelivestock: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 5,
-            //                         2: 5,
-            //                         3: 1
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_protecttrees: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 5,
-            //                         2: 1
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_wildlifehabitat: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 4,
-            //                         4: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_monitor: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         agrienvironmentalmanagement_pesticides: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 agrienvironmentalmanagement_pesticides_use:  function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 3,
-            //                         2: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_avoid:  function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 3,
-            //                         2: 1,
-            //                         3: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_impact: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 4,
-            //                         2: 3,
-            //                         3: 1,
-            //                         4: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_amount: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 3,
-            //                         2: 4,
-            //                         3: 5,
-            //                         4: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_sprayer: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 4,
-            //                         4: 5,
-            //                         5: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_watercontamination: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 3,
-            //                         2: 1,
-            //                         3: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_beessafety: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 1,
-            //                         2: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_beessafetyspray: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 1,
-            //                         2: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 agrienvironmentalmanagement_pesticides_birdssafety: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 1,
-            //                         2: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         }
-            //     }
-            // },
             landscapeheritage: {
                 total: categoryTotalFn,
                 indicators: {
@@ -15000,13 +13592,14 @@ function PGTOOL() {
                     landscapeheritage_landscapefeatures: {
                         total: indicatorTotalFn,
                         questions: {
-                            landscapeheritage_landscapefeatures_characteristicfarm: function(acode) {
+                            landscapeheritage_landscapefeatures_siteselection: function(acode) {
                                 var scores = {
                                     0: 1,
                                     1: 2,
                                     2: 3,
                                     3: 4,
-                                    4: 5
+                                    4: 5,
+                                    5: false
                                 }
                                 return scores[acode]
                             }
@@ -15048,180 +13641,6 @@ function PGTOOL() {
                     }
                 }
             },
-            // water: {
-            //     total: categoryTotalFn,
-            //     indicators: {
-            //         water_protection: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 water_protection_actions: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 5,
-            //                         4: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         water_flood: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 water_flood_mitigationsystem: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 4,
-            //                         4: 5,
-            //                         5: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         water_plan: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 water_plan_completed: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 4,
-            //                         4: 5,
-            //                         5: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         water_harvesting: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 water_harvesting_recycled: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 5,
-            //                         4: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_harvesting_raingroundwater: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 5,
-            //                         4: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         water_irrigation: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 water_irrigation_crops: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: false,
-            //                         2: false
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_uaairrigated: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 5,
-            //                         2: 4,
-            //                         3: 3,
-            //                         4: 2,
-            //                         5: 1
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_appsystem: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 5,
-            //                         4: 3
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_rate: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_pressure: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_uniformity: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_weatherconditions: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_summerirri: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 water_irrigation_system: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         }
-            //     }
-            // },
             npkbudget: {
                 total: categoryTotalFn,
                 indicators: {
@@ -15272,232 +13691,6 @@ function PGTOOL() {
                     }
                 }
             },
-            // fertiliserman: {
-            //     total: categoryTotalFn,
-            //     indicators: {
-            //         fertiliserman_fertiliser: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 fertiliserman_fertiliser_spreaders: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_fertiliser_rates: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_fertiliser_nfertilisers: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         fertiliserman_nutrientplanning: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 fertiliserman_nutrientplanning_levelapplication: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_nutrientplanning_monitornutrientlevels: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_nutrientplanning_stafftraining: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_nutrientplanning_organiccompostscontent: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //             }
-            //         },
-            //         fertiliserman_manureman: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 fertiliserman_manureman_storemanure: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 3,
-            //                         5: 4,
-            //                         6: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_storeslurry: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_storeslurryfloor: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_storeslurrycapacity: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_storeslurryinspect: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_spreadslurry: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 4,
-            //                         4: 5,
-            //                         5: 3
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_slurryapplications: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_timespread: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_incorporateslurry: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 4,
-            //                         5: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_manureman_incorporatemanure: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 4,
-            //                         4: 5
-            //                     }
-            //                     return scores[acode]
-            //                 }
-            //             }
-            //         },
-            //         fertiliserman_farmwaste: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 fertiliserman_farmwaste_recycled: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 4,
-            //                         4: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_farmwaste_medicinedisposal: function(acode) {
-            //                     var scores = {
-            //                         0: false,
-            //                         1: 1,
-            //                         2: 2,
-            //                         3: 3,
-            //                         4: 5,
-            //                         5: 4,
-            //                         6: 5
-            //                     }
-            //                     return scores[acode]
-            //                 },
-            //                 fertiliserman_farmwaste_wastestrategy: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 3,
-            //                         2: 5
-            //                     }
-            //                     return scores[acode]
-            //                 }
-            //             }
-            //         }
-            //     }
-            // },
             energycarbon: {
                 total: categoryTotalFn,
                 indicators: {
@@ -15772,124 +13965,8 @@ function PGTOOL() {
                             },
                         }
                     }
-
                 }
             },
-            // foodsecurity: {
-            //     total: categoryTotalFn,
-            //     indicators: {
-            //         foodsecurity_totalprodutivity: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 foodsecurity_totalprodutivity_yield: function(acode) {
-            //                     var scores = {
-            //                         0: 5,
-            //                         1: 4,
-            //                         2: 3,
-            //                         3: 2,
-            //                         4: 1
-            //                     }
-            //                     return scores[acode]
-            //                 }
-            //             }
-            //         },
-            //         foodsecurity_localfood: {
-            //             total: function() {
-            //                 var sales = get('foodsecurity_localfood_localsales') + get('foodsecurity_localfood_countysales') + get('foodsecurity_localfood_regionalsales')
-            //                 if (sales > 80) {
-            //                     return 5
-            //                 } else if (sales > 60) {
-            //                     return 4
-            //                 } else if (sales > 40) {
-            //                     return 3
-            //                 } else if (sales > 20) {
-            //                     return 2
-            //                 } else {
-            //                     return 1
-            //                 }
-            //             }
-            //         },
-            //         foodsecurity_offfarmfeed: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 foodsecurity_offfarmfeed_feed: function(value) {
-            //                     if (value === 0) {
-            //                         return 5
-            //                     } else if (value < 20) {
-            //                         return 4
-            //                     } else if (value < 40) {
-            //                         return 3
-            //                     } else if (value < 60) {
-            //                         return 2
-            //                     } else {
-            //                         return 1
-            //                     }
-            //                 }
-            //             }
-            //         },
-            //         foodsecurity_thirdpartyendorsement: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 foodsecurity_thirdpartyendorsement_havereceived: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 2,
-            //                         2: 3,
-            //                         3: 5
-            //                     }
-            //                     return scores[acode]
-            //                 }
-            //             }
-            //         },
-            //         foodsecurity_foodqualitycertification: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 foodsecurity_foodqualitycertification_certificationlevel: function(acode) {
-            //                     var scores = {
-            //                         0: 1,
-            //                         1: 3,
-            //                         2: 5
-            //                     }
-            //                     return scores[acode]
-            //                 }
-            //             }
-            //         },
-            //         foodsecurity_freshproduce: {
-            //             total: indicatorTotalFn,
-            //             questions: {
-            //                 foodsecurity_freshproduce_fruitrootsvegetables: function(value) {
-            //                     if (value === false) return false
-            //                     var perc = value / get('initialdata_landuse_totalUAA')
-            //                     if (perc > 0.2) {
-            //                         return 5
-            //                     } else if (perc > 0.15) {
-            //                         return 4
-            //                     } else if (perc > 0.10) {
-            //                         return 3
-            //                     } else if (perc > 0.05) {
-            //                         return 2
-            //                     } else {
-            //                         return 1
-            //                     }
-            //                 },
-            //                 foodsecurity_freshproduce_humanconsumption: function(value) {
-            //                     if (value === false) return false
-            //                     if (value < 20) {
-            //                         return 1
-            //                     } else if (value < 40) {
-            //                         return 2
-            //                     } else if (value < 60) {
-            //                         return 3
-            //                     } else if (value < 80) {
-            //                         return 4
-            //                     } else {
-            //                         return 5
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // },
             agriculturalsystemsdiversity: {
                 total: categoryTotalFn,
                 indicators: {
@@ -15952,6 +14029,25 @@ function PGTOOL() {
                                 } else {
                                     return 5
                                 }
+                            }
+                        }
+                    },
+                    agriculturalsystemsdiversity_woodyperennial:{
+                        total: indicatorTotalFn,
+                        questions: {
+                            agriculturalsystemsdiversity_woodyperennial_area: function(value) {
+                                if (value === false) return false
+                                if (value > 2.49) {
+                                    return 5
+                                } else if (value > 2) {
+                                    return 4
+                                } else if (value > 1.5) {
+                                    return 3
+                                } else if (value > 1) {
+                                    return 2
+                                } else {
+                                    return 1
+                                }   
                             }
                         }
                     },
@@ -16201,231 +14297,6 @@ function PGTOOL() {
             farmbusinessresilience: {
                 total: categoryTotalFn,
                 indicators: {
-                    farmbusinessresilience_financialviability: {
-                        total: indicatorTotalFn,
-                        questions: {
-                            farmbusinessresilience_financialviability_milk: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.MILK
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_beef: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.BEEF_COW
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_weaners: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.WEANERS
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_pigs: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.FINISHED_PIGS
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_lambslowland: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.LAMBS_LOWLAND
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_lambsupland: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.LAMBS_UPLAND
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_eggs: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.FREE_RANGE_EGGS
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_chicken: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.TABLE_CHICKEN
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_feedwheat: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.FEED_WHEAT
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_millingwheat: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.MILLING_WHEAT
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_barley: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.BARLEY
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_oats: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.OATS
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_potatoesmaincrop: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.POTATOES_MAINCROP
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_potatoesearly: function(value) {
-                                if (value === false) return false
-                                var ratio = value/PRICES.POTATOES_EARLY
-                                if (ratio < 0.5) {
-                                    return 1
-                                } else if (ratio < 0.9) {
-                                    return 2
-                                } else if (ratio < 1.1) {
-                                    return 3
-                                } else if (ratio < 1.5) {
-                                    return 4
-                                } else {
-                                    return 5
-                                }
-                            },
-                            farmbusinessresilience_financialviability_netassets: function(acode) {
-                                var scores = {
-                                    0: 5,
-                                    1: 4,
-                                    2: 3,
-                                    3: 2,
-                                    4: 1
-                                }
-                                return scores[acode]
-                            }
-                        }
-                    },
                     farmbusinessresilience_farmresilience: {
                         total: indicatorTotalFn,
                         questions: {
@@ -17132,7 +15003,7 @@ function PGTOOL() {
             'initialdata_woodland_aftimberexported',
             'initialdata_woodland_nonaffuelexported',
             'initialdata_woodland_nonaftimberexported',
-            'initialdata_woodland_hedgefuelexported'
+            'initialdata_woodland_hedgefuelexport'
         ]
         for (var qcode of woodland) {
             var tonnesExported = get(qcode)
@@ -17240,34 +15111,6 @@ function PGTOOL() {
                     }
                 }
             },
-            // agrienvironmentalmanagement: {
-            //     aggregator: categoryAggregatorFn,
-            //     indicators: {
-            //         agrienvironmentalmanagement_habitat: {
-            //             aggregator: indicatorAggregatorFn,
-            //             questions: {
-            //                 agrienvironmentalmanagement_habitat_percpp: function() {
-            //                     return calculatePercentage(sum(get('initialdata_crops_permanentpasturearea')), get('initialdata_landuse_totalarea'))
-            //                 },
-            //                 agrienvironmentalmanagement_habitat_perclowinputpp: function() {
-            //                     var areas = get('initialdata_crops_permanentpasturearea')
-            //                     if (sum(areas) > 0) {
-            //                         var lowinputpp = 0
-            //                         var pastures = get('initialdata_crops_permanentpasturename')
-            //                         for (var idx = 0; idx < pastures.length; idx++) {
-            //                             if (['pp_low_input_rough_grazing_high_clover_content', 'pp_low_input_rough_grazing_medium_clover_content', 'pp_low_input_rough_grazing_low_clover_content', 'pp_low_input_rough_grazing_zero_clover_content'].includes(pastures[idx])) {
-            //                                 lowinputpp += areas[idx]
-            //                             }
-            //                         }
-            //                         return calculatePercentage(lowinputpp, get('initialdata_landuse_totalarea'))
-            //                     } else {
-            //                         return false
-            //                 }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // },
             npkbudget: {
                 aggregator: categoryAggregatorFn,
                 indicators: {
@@ -18195,6 +16038,14 @@ function PGTOOL() {
                                 return get('agriculturalsystemsdiversity_livestockdiversity_dairycattlebreeds') + get('agriculturalsystemsdiversity_livestockdiversity_beefcattlebreeds') + get('agriculturalsystemsdiversity_livestockdiversity_sheepbreeds') + get('agriculturalsystemsdiversity_livestockdiversity_pigsbreeds') + get('agriculturalsystemsdiversity_livestockdiversity_poultrybreeds') + get('agriculturalsystemsdiversity_livestockdiversity_otherlivestockbreeds')
                             },
                         }
+                    },
+                    agriculturalsystemsdiversity_woodyperennial:{
+                        aggregator: indicatorAggregatorFn,
+                        questions: {
+                            agriculturalsystemsdiversity_woodyperennial_area: function() {
+                                return calculatePercentage((get('initialdata_woodland_affuelarea')+get('initialdata_woodland_aftimberarea')+get('initialdata_woodland_nonaffuelarea')+get('initialdata_woodland_nonaftimberarea')), (get('initialdata_landuse_totalUAA')+get('initialdata_landuse_totalwoodland')))
+                            }
+                        }
                     }
                 }
             },
@@ -18236,7 +16087,6 @@ function PGTOOL() {
                             farmbusinessresilience_financialsum_income_afc: function() {
                                 return get('farmbusinessresilience_farmincome_decoupled_af')+
                                 get('farmbusinessresilience_farmincome_agprac_af')+
-                                get('farmbusinessresilience_farmincome_agprac_af')+
                                 get('farmbusinessresilience_farmincome_coupled_af')+
                                 get('farmbusinessresilience_farmincome_ruraldev_af')+
                                 get('farmbusinessresilience_farmincome_other_af')+
@@ -18252,7 +16102,6 @@ function PGTOOL() {
                             },
                             farmbusinessresilience_financialsum_income_nafc: function() {
                                 return get('farmbusinessresilience_farmincome_decoupled_naf')+
-                                get('farmbusinessresilience_farmincome_agprac_naf')+
                                 get('farmbusinessresilience_farmincome_agprac_naf')+
                                 get('farmbusinessresilience_farmincome_coupled_naf')+
                                 get('farmbusinessresilience_farmincome_ruraldev_naf')+
