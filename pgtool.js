@@ -8314,6 +8314,19 @@ function PGTOOL() {
                             content: "Based on Nature on the Map (Natural England, 2010)"
                         },
                         questions: {
+                            landscapeheritage_landscapefeatures_characteristic: {
+                                question_name: "How characteristic is the farm of the local area?",
+                                compulsory: true,
+                                question_type: QUESTION_TYPE.DROPDOWN,
+                                answer_list: [
+                                    { answer_name: "Not at all", answer_code: 0 },
+                                    { answer_name: "Little", answer_code: 1 },
+                                    { answer_name: "Partially", answer_code: 2 },
+                                    { answer_name: "Mostly", answer_code: 3 },
+                                    { answer_name: "Fully", answer_code: 4 },
+                                    { answer_name: "N/A", answer_code: 5}
+                                ]
+                            },
                             landscapeheritage_landscapefeatures_siteselection: {
                                 question_name: "Do you carefully select the sites for growing non-food crops including non-food trees (e.g. sitting on marginal land)?",
                                 compulsory: true,
@@ -13592,6 +13605,17 @@ function PGTOOL() {
                     landscapeheritage_landscapefeatures: {
                         total: indicatorTotalFn,
                         questions: {
+                            landscapeheritage_landscapefeatures_characteristic: function(acode) {
+                                var scores = {
+                                    0: 1,
+                                    1: 2,
+                                    2: 3,
+                                    3: 4,
+                                    4: 5,
+                                    5: false
+                                }
+                                return scores[acode]
+                            },
                             landscapeheritage_landscapefeatures_siteselection: function(acode) {
                                 var scores = {
                                     0: 1,
