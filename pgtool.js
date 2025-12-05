@@ -8375,9 +8375,10 @@ function PGTOOL() {
                                 ],
                                 question_type: QUESTION_TYPE.DROPDOWN,
                                 answer_list: [
-                                    { answer_name: "No", answer_code: 0 },
-                                    { answer_name: "Yes, one", answer_code: 1 },
-                                    { answer_name: "Yes, more than one", answer_code: 2 }
+                                    { answer_name: "N/A", answer_code: 0 },
+                                    { answer_name: "No", answer_code: 1 },
+                                    { answer_name: "Yes, one", answer_code: 2 },
+                                    { answer_name: "Yes, more than one", answer_code: 3 }
                                 ]
                             },
                             landscapeheritage_geneticheritage_crops: {
@@ -8391,9 +8392,10 @@ function PGTOOL() {
                                 ],
                                 question_type: QUESTION_TYPE.DROPDOWN,
                                 answer_list: [
-                                    { answer_name: "No", answer_code: 0 },
-                                    { answer_name: "Yes, one", answer_code: 1 },
-                                    { answer_name: "Yes, more than one", answer_code: 2 }
+                                    { answer_name: "N/A", answer_code: 0 },
+                                    { answer_name: "No", answer_code: 1 },
+                                    { answer_name: "Yes, one", answer_code: 2 },
+                                    { answer_name: "Yes, more than one", answer_code: 3 }
                                 ]
                             },
                         }
@@ -12823,7 +12825,7 @@ function PGTOOL() {
                         }
                     },
                     animalhealthwelfare_healthplan: {
-                        title: "Staff resources",
+                        title: "Health Plan",
                         questions: {
                             animalhealthwelfare_healthplan_plan: {
                                 question_name: "Do you have a health plan?",
@@ -13336,6 +13338,7 @@ function PGTOOL() {
                             governance_ethics_decisions: {
                                 question_name: "When making farm management decisions, do you take account of the effect they are having outside of the farm?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 answer_list: [
                                     { answer_name: "Yes and can give several examples", answer_code: 0 },
                                     { answer_name: "Have considered it in most areas but not all", answer_code: 1 },
@@ -13347,6 +13350,7 @@ function PGTOOL() {
                             governance_ethics_permaculture: {
                                 question_name: "To what extent are the three key Permaculture principles appllies on the farm?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 guidance: {
                                     html: true,
                                     content: "1. Provision for people to access the resources necessary to their existence. 2. Provision for all life system to continue and multiply. 3. Living within limits and distributing surplus."
@@ -13367,6 +13371,7 @@ function PGTOOL() {
                             governance_accountability_tool: {
                                 question_name: "Have you previously assessed the sustainabilty of the farm with a recognised sustainability assessment (SA) tool in the past?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 answer_list: [
                                     { answer_name: "Annually with a SA tool", answer_code: 0 },
                                     { answer_name: "Regular (approx. every 3 years) assessment with a SA tool", answer_code: 1 },
@@ -13377,6 +13382,7 @@ function PGTOOL() {
                             governance_accountability_managementplan: {
                                 question_name: "Do you have a sustainability management plan in place for the farm?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 answer_list: [
                                     { answer_name: "Yes, plans in place with clear objectives across multiple dimensions (environmental, social, economic)", answer_code: 0 },
                                     { answer_name: "Plans are in place for sustianability across mulitple dimensions (environmental, social, economic) but without clear objectives", answer_code: 1 },
@@ -13393,6 +13399,7 @@ function PGTOOL() {
                             governance_participation_collaboration: {
                                 question_name: "Do you work together (information sharing, co-ops, shared outlets etc.) with other stakholders in the production chain?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 answer_list: [
                                     { answer_name: "Member of co-operative groups that, together, cover all stakeholder groups", answer_code: 0 },
                                     { answer_name: "In regular conversation in an unofficial capacity with all stakeholder groups", answer_code: 1 },
@@ -13409,6 +13416,7 @@ function PGTOOL() {
                             governance_law_compliance: {
                                 question_name: "Are you aware of and compliant with all national laws and international agreements related to employment law and farming?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 answer_list: [
                                     { answer_name: "Definetly in compliance with all laws", answer_code: 0 },
                                     { answer_name: "In compliance but not certain that all laws known", answer_code: 1 },
@@ -13419,6 +13427,7 @@ function PGTOOL() {
                             governance_law_access: {
                                 question_name: "Did your land acquisition consider and make allowance for the access rights of the previoud owners/tenants?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 answer_list: [
                                     { answer_name: "Yes, considered and made ful allowances above and beyond legal requirements", answer_code: 0 },
                                     { answer_name: "Yes, considered and made allowances in line with legal requirements", answer_code: 1 },
@@ -13435,6 +13444,7 @@ function PGTOOL() {
                             governance_holistic_changes: {
                                 question_name: "In what ways have you changes your farming practices recently (last 3 years) in the light of new knowledge and research?",
                                 question_type: QUESTION_TYPE.DROPDOWN,
+                                compulsory: true,
                                 answer_list: [
                                     { answer_name: "Mulitple changes to practices; follow best practices", answer_code: 0 },
                                     { answer_name: "Changes to practices but follow irregularly", answer_code: 1 },
@@ -13647,17 +13657,19 @@ function PGTOOL() {
                         questions: {
                             landscapeheritage_geneticheritage_rarebreeds: function(acode) {
                                 var scores = {
-                                    0: 1,
-                                    1: 3,
-                                    2: 5
+                                    0: false,
+                                    1: 1,
+                                    2: 3,
+                                    3: 5
                                 }
                                 return scores[acode]
                             },
                             landscapeheritage_geneticheritage_crops: function(acode) {
                                 var scores = {
-                                    0: 1,
-                                    1: 3,
-                                    2: 5
+                                    0: false,
+                                    1: 1,
+                                    2: 3,
+                                    3: 5
                                 }
                                 return scores[acode]
                             },
@@ -14583,9 +14595,9 @@ function PGTOOL() {
                             animalhealthwelfare_animalhealth_longevity: function(acode) {
                                 if (acode === false) return false
                                 var scores = {
-                                    0: 5,
+                                    0: 1,
                                     1: 3,
-                                    2: 1
+                                    2: 5
                                 }
                                 return scores[acode]
                             },
@@ -14617,7 +14629,7 @@ function PGTOOL() {
                                     2: 3,
                                     3: 2,
                                     4: 1,
-                                    5: null,
+                                    5: false,
                                 }
                                 return scores[acode]
                             },
@@ -14793,7 +14805,7 @@ function PGTOOL() {
                                     0: 5,
                                     1: 4,
                                     2: 3,
-                                    3: 4,
+                                    3: 2,
                                     4: 1
                                 }
                                 return scores[acode]
