@@ -14312,9 +14312,10 @@ function PGTOOL() {
                             },
                             socialcapital_humanhealth_treeimpact: function(acode) {
                                 var scores = {
-                                    0: 3,
-                                    1: 1,
-                                    2: 5
+                                    0: false,
+                                    1: 3,
+                                    2: 1,
+									3: 5
                                 }
                                 return scores[acode]
                             },
@@ -16547,4 +16548,5 @@ function PGTOOL() {
             return { errors: errorsResponse, scores: PGTOOL_SCORES, calculations: PGTOOL_CALCULATIONS };
         }
     }
+
 }
